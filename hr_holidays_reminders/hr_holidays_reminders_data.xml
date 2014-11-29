@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        
+        <!-- The employee's manager get's an email with the request -->
+        <record id="hr_holidays_reminders_leave_request_manager" model="ir.actions.server">
+            <field name="name">hr_holidays_reminders_leave_request_manager</field>
+            <field name="model_id" ref="hr_holidays.model_hr_holidays"/>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">email</field>
+            <field name="email">object.employee_id.parent_id.work_email</field>
+            <field name="subject">[[object.holiday_status_id.name]] request from [[object.employee_id.name]]</field>
+            <field name="message">Dear [[object.employee_id.parent_id.name]],
+
+You have one [[object.holiday_status_id.name]] request from [[object.employee_id.name]]. 
+
+Thank you.
+            </field>
+        </record>
+          
+
+        <!-- The employee get's an email telling him of the request's approval --> 
+        <record id="hr_holidays_reminders_leave_approval_employee" model="ir.actions.server">
+            <field name="name">hr_holidays_reminders_leave_approval_employee</field>
+            <field name="model_id" ref="hr_holidays.model_hr_holidays"/>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">email</field>
+            <field name="email">object.employee_id.work_email</field>
+            <field name="subject">[[object.holiday_status_id.name]] approval of [[object.employee_id.name]]</field>
+            <field name="message">Dear [[object.employee_id.name]]
+
+[[object.number_of_days_temp]] day(s) request from '[[object.date_from]]' to '[[object.date_to]]' has been approved.
+
+Thank You.
+            </field>
+        </record>
+
+
+        <!-- The employee get's an email telling him of the request's refusal -->
+        <record id="hr_holidays_reminders_leave_refusal_employee" model="ir.actions.server">
+            <field name="name">hr_holidays_reminders_leave_refusal_employee</field>
+            <field name="model_id" ref="hr_holidays.model_hr_holidays"/>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">email</field>
+            <field name="email">object.employee_id.work_email</field>
+            <field name="subject">[[object.holiday_status_id.name]] refusal of [[object.employee_id.name]]</field>
+            <field name="message">Dear [[object.employee_id.name]]
+
+[[object.number_of_days_temp]] day(s) request from '[[object.date_from]]' to '[[object.date_to]]' has been refused.
+
+Thank You.
+            </field>
+        </record>
+
+
+
+
+        <!-- reminder of leave requests to be approved -->
+        <record model="ir.cron" id="hr_holidays_reminders_reminder_leaves_to_be_approved">
+            <field name="name">Leave requests to be approved (email reminder)</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'hr.holidays'"/>
+            <field name="function" eval="'send_reminders_requests_to_approve'"/>
+            <field name="args" eval="'(False,)'" />
+        </record>
+        <!-- reminder of allocation requests to be approved -->
+        <record model="ir.cron" id="hr_holidays_reminders_reminder_allocations_to_be_approved">
+            <field name="name">Allocation requests to be approved (email reminder)</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'hr.holidays'"/>
+            <field name="function" eval="'send_reminders_requests_to_approve'"/>
+            <field name="args" eval="'(False,)'" />
+        </record>
+
+        <!--
+        <record id="hr_holidays_reminders_requests_to_be_approved_email_template" model="email.template">
+            <field name="name">Holiday requests to be approved (email reminder)</field>
+            <field name="email_from"></field>
+            <field name="subject">${object.user_id.name}</field>
+            <field name="email_to"></field>
+            <field name="lang"></field>
+            <field name="model_id" ref="hr.holidays"/>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html"><![CDATA[
+Hello ${object.user_id.name},
+            ]]></field>
+        </record>
+        -->
+
+
+    </data>
+</openerp>

@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="event_invitation_view_event_type_form">
+            <field name="name">event_invitation_view_event_type_form</field>
+            <field name="model">event.type</field>
+            <field name="inherit_id" ref="event.view_event_type_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='default_email_event']" position="before">
+                    <field name="default_email_invitation"/>    
+                </xpath>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="event_invitation_view_event_form">
+            <field name="name">event_invitation_view_event_form</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                
+                <xpath expr="//button[@name='button_confirm']" position="before">
+                    <button string="Send invitations" name="button_send_invitations" 
+                            type="object" class="oe_highlight" groups="event.group_event_manager,event.group_event_user"
+                            attrs="{'invisible':['|',('email_invitation_id','=',False),('email_invitation_allow_sending','=',False)]}"/>
+                </xpath>
+                
+                
+                <xpath expr="//button[@help='Register with this event']" position="before">
+                    <button name="button_count_invitations" 
+                                type="object" 
+                                class="oe_stat_button oe_inline" 
+                                icon="fa-envelope-o" 
+                                help="Invitations (created/sent)"
+                                groups="event.group_event_manager,event.group_event_user">
+                        <field name="count_invitations" widget="statinfo" string="Invitations"/>
+                    </button>                    
+                </xpath>
+                
+                <xpath expr="//page[@string='Event Details']" position="before">
+                    <page string="Invitations" groups="event.group_event_manager,event.group_event_user">
+                        <group>
+                            <field name="default_invitation_email_template_name" invisible="1"/>
+                            <field name="default_invitation_email_template_subject" invisible="1"/>
+                            <field name="default_invitation_email_template_body_html" invisible="1"/>
+                            <field name="default_invitation_email_template_model" invisible="1"/>
+
+                            <field name="email_invitation_allow_sending"/> 
+                            
+                            <field name="email_invitation_id" 
+                                        context="{
+                                                'default_name' : default_invitation_email_template_name, 
+                                                'default_subject' : default_invitation_email_template_subject,
+                                                'default_body_html' : default_invitation_email_template_body_html,  
+                                                'default_model_id' : default_invitation_email_template_model
+                                                }"
+                                        attrs="{'invisible':[('email_invitation_allow_sending','=',False)],'required':[('email_invitation_allow_sending','=',True)]}"/>    
+                            
+                            <field name="email_invitation_text" 
+                                    attrs="{'invisible':['|',('email_invitation_id','=',False),('email_invitation_allow_sending','=',False)]}"/>                            
+
+                            <field name="email_invitation_partner_selection" 
+                                    attrs="{'invisible':[('email_invitation_allow_sending','=',False)],'required':[('email_invitation_allow_sending','=',True)]}"/>/>
+                            
+                            <field name="email_invitation_partner_selection_replace"
+                                    attrs="{'invisible':['|',('email_invitation_partner_selection','in',['use_template']),('email_invitation_allow_sending','=',False)],'required':[('email_invitation_allow_sending','=',True)]}"/>
+
+                            <field name="email_invitation_partner_ids"
+                                    attrs="{'invisible':['|',('email_invitation_partner_selection','in',['use_template']),('email_invitation_allow_sending','=',False)]}"/>
+                            
+                            <field name="invitation_ids" attrs="{'invisible':[('email_invitation_allow_sending','=',True)]}">
+                                <tree string="Invitations">
+                                    <field name="date"/>
+                                    <field name="send_type"/>
+                                    <field name="text"/>
+                                </tree>
+                            </field>
+                            
+                            <field name="invitation_line_ids" attrs="{'invisible':[('email_invitation_allow_sending','=',True)]}">
+                                <tree string="Partners">
+                                    <field name="partner_id"/>
+                                    <field name="state"/>
+                                    <field name="date"/>
+                                </tree>
+                            </field>
+                            
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        
+
+
+        <record model="ir.ui.view" id="event_invitation_view_event_type_tree">
+            <field name="name">event_invitation_view_event_type_tree</field>
+            <field name="model">event.type</field>
+            <field name="inherit_id" ref="event.view_event_type_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="default_registration_min"/>
+                    <field name="default_registration_max"/>
+                    <field name="default_email_invitation"/>
+                    <field name="default_email_event"/>
+                    <field name="default_email_registration"/>
+                </field>
+            </field>
+        </record>
+        
+
+        
+
+        <record model="ir.ui.view" id="event_invitation_view_form">
+            <field name="name">event_invitation_view_form</field>
+            <field name="model">event.invitation</field>
+            <field name="arch" type="xml">
+                <form string="Event invitation">
+                    <group>
+	                    <field name="event_id"/>
+	                    <field name="date"/>
+	                    <field name="send_type"/>
+	                    <field name="text"/>
+	                    <field name="line_ids">
+	                        <tree string="Partner">
+	                            <field name="partner_id"/>
+	                            <field name="state"/>
+	                        </tree>
+	                    </field>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="event_invitation_view_tree">
+            <field name="name">event_invitation_view_tree</field>
+            <field name="model">event.invitation</field>
+            <field name="arch" type="xml">
+                <tree string="Event invitation">
+                    <field name="event_id"/>
+                    <field name="date"/>
+                    <field name="send_type"/>
+                    <field name="text"/>
+                </tree>
+            </field>
+        </record>
+        
+
+        <record model="ir.ui.view" id="event_invitation_line_view_tree">
+            <field name="name">event_invitation_line_view_tree</field>
+            <field name="model">event.invitation.line</field>
+            <field name="arch" type="xml">
+                <tree string="Invited partners">
+                    <field name="event_id"/>
+                    <field name="invitation_id"/>
+                    <field name="partner_id"/>
+                    <field name="state"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_event_invitation_line_view_tree" model="ir.actions.act_window">
+            <field name="name">Invited partners</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">event.invitation.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="event_invitation_line_view_tree"/>
+        </record>
+        <menuitem name="Invited partners" action="action_event_invitation_line_view_tree" id="menu_event_invitation_invited_partners" parent="event.event_main_menu"/>        
+
+        
+        <record model="ir.ui.view" id="event_invitation_view_event_tree">
+            <field name="name">event_invitation_view_event_tree</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_tree"/>
+            <field name="arch" type="xml">
+                <field name="state" position="before">
+                    <field name="count_invitations"/>
+                </field>
+            </field>
+        </record>        
+        
+        
+        
+    </data>
+</openerp>

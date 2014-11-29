@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="multicompany_enforcement_account_voucher_sequence_view" model="ir.ui.view">
+            <field name="name">multicompany_enforcement_account_voucher.sequence_view</field>
+            <field name="model">ir.sequence</field>
+            <field name="groups_id" eval="[(6, 0, [ref('base.group_multi_company') ])]"/>
+            <field name="inherit_id" ref="base.sequence_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

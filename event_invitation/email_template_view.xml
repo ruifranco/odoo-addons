@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="event_invitation_email_template_form">
+            <field name="name">event_invitation_email_template_form</field>
+            <field name="model">email.template</field>
+            <field name="inherit_id" ref="email_template.email_template_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_to']" position="before">
+                    <field name="email_template_partner_ids"/>
+                    <field name="email_template_send_type"/>
+                </xpath>
+                
+                <xpath expr="//field[@name='partner_to']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                
+                
+            </field>
+        </record>
+    </data>
+</openerp>

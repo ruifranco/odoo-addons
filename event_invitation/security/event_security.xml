@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    
+
+    <data noupdate="1">
+
+        
+        <record model="ir.rule" id="event_invitation_company_rule">
+            <field name="name">Event/Invitation: multi-company</field>
+            <field name="model_id" ref="model_event_invitation"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',
+                                            ('company_id', '=', False),
+                                            ('company_id', 'child_of', [user.company_id.id]),
+                                        ]
+            </field>
+        </record>
+        <record model="ir.rule" id="event_invitation_line_company_rule">
+            <field name="name">Event/Invitation (line): multi-company</field>
+            <field name="model_id" ref="model_event_invitation_line"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',
+                                            ('company_id', '=', False),
+                                            ('company_id', 'child_of', [user.company_id.id]),
+                                        ]
+            </field>
+        </record>        
+
+        
+
+    </data>
+</openerp>

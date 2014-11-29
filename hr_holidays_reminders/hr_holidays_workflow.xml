@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<openerp>
+<data>
+
+    <!-- sends an email to the employee's manager when the request is confirmed -->
+    <record model="workflow.activity" id="hr_holidays.act_confirm">
+        <field name="wkf_id" ref="hr_holidays.wkf_holidays" />
+        <field name="name">confirm</field>
+        <field name="kind">function</field>
+        <field name="action">holidays_confirm()</field>
+        <field name="action_id" ref="hr_holidays_reminders.leave_request_manager"/>
+        <field name="split_mode">OR</field>
+    </record>
+
+
+    <!-- sends an email to the employee when the request is accepted -->
+    <record model="workflow.activity" id="hr_holidays.act_validate">
+        <field name="wkf_id" ref="hr_holidays.wkf_holidays" />
+        <field name="name">validate</field>
+        <field name="kind">function</field>
+        <field name="action">holidays_validate()</field>
+        <field name="action_id" ref="hr_holidays_reminders.leave_approval_employee"/>
+    </record>
+
+
+    <!-- sends an email to the employee when the request is refused -->
+    <record model="workflow.activity" id="hr_holidays.act_refuse">
+        <field name="wkf_id" ref="hr_holidays.wkf_holidays" />
+        <field name="name">refuse</field>
+        <field name="flow_stop">True</field>
+        <field name="kind">function</field>
+        <field name="action">holidays_refuse()</field>
+        <field name="action_id" ref="hr_holidays_reminders.leave_refusal_employee"/>
+    </record>
+
+</data>
+</openerp>
