@@ -30,6 +30,8 @@
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
 	'depends'       : ['base'],
 	'data'          : [
+                       'security/ir.model.access.csv',
+	
                         'data/clothing_sizes_types_data.xml',
                         'data/clothing_sizes_general_data.xml',
                         'data/clothing_sizes_feet_data.xml',
