@@ -14,6 +14,10 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+#others
+*.pyc
+*.txt
+
 # =========================
 # Operating System Files
 # =========================
@@ -41,7 +45,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-#others
-.pyc
-.txt
