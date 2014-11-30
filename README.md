@@ -15,3 +15,6 @@ Sets reminders related to employee's leaves
 
 [ multicompany_enforcement_account_voucher ]
 Domain and filter enforcement in a multicompany environment
+
+[ hr_partner_emoployee ]
+Creates an employee out of a partner
