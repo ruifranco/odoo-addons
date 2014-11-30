@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem id="clothing_sizes.menu_config" parent="base.menu_administration" name="Clothing sizes"/>
+        
+        <record id="clothing_sizes_view_types_form" model="ir.ui.view">
+            <field name="name">clothing_sizes_view_types_form</field>
+            <field name="model">clothing_sizes.types</field>
+            <field name="arch" type="xml">
+                <form string="Types">     
+                    <group>         
+                        <field name="name"/><newline/>
+                        <field name="active"/><newline/>
+                    </group>
+                </form>
+            </field>
+        </record>
+         <record id="clothing_sizes_view_types_tree" model="ir.ui.view">
+            <field name="name">clothing_sizes_view_types_tree</field>
+            <field name="model">clothing_sizes.types</field>
+            <field name="arch" type="xml">
+                <tree string="Types">              
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="open_clothing_sizes_view_types_tree" model="ir.actions.act_window">
+            <field name="name">Types</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">clothing_sizes.types</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="clothing_sizes_view_types_tree"/>
+        </record>
+        <menuitem name="Types" action="open_clothing_sizes_view_types_tree" id="menu_open_clothing_sizes_view_types_tree" parent="clothing_sizes.menu_config"/>
+
+
+
+
+        <record id="clothing_sizes_view_sizes_form" model="ir.ui.view">
+            <field name="name">clothing_sizes_view_sizes_form</field>
+            <field name="model">clothing_sizes.sizes</field>
+            <field name="arch" type="xml">
+                <form string="Sizes">       
+                    <group>       
+	                    <field name="name"/><newline/>
+	                    <field name="code"/><newline/>
+	                    <field name="age"/><newline/>
+	                    <field name="gender"/><newline/>
+	                    <field name="type_id"/><newline/>
+	                    <field name="country_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+         <record id="clothing_sizes_view_sizes_tree" model="ir.ui.view">
+            <field name="name">clothing_sizes_view_sizes_tree</field>
+            <field name="model">clothing_sizes.sizes</field>
+            <field name="arch" type="xml">
+                <tree string="Sizes">              
+                    <field name="type_id"/>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="gender"/>
+                </tree>
+            </field>
+        </record>
+                
+        <record id="open_clothing_sizes_view_sizes_tree" model="ir.actions.act_window">
+            <field name="name">Sizes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">clothing_sizes.sizes</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="clothing_sizes_view_sizes_tree"/>
+        </record>
+        <menuitem name="Sizes" action="open_clothing_sizes_view_sizes_tree" id="menu_open_clothing_sizes_view_sizes_tree" parent="clothing_sizes.menu_config"/>
+
+
+
+        <record id="view_clothing_sizes_filter" model="ir.ui.view">
+            <field name="name">account.invoice.select</field>
+            <field name="model">clothing_sizes.sizes</field>
+            <field name="arch" type="xml">
+                <search string="Search size">
+                    <field name="code" string="Code"/>
+                    <field name="name" string="Name"/>
+                    <field name="country_ids" string="Country"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Type" icon="terp-partner" domain="[]" context="{'group_by':'type_id'}"/>
+                        <filter string="Gender" icon="terp-partner" domain="[]" context="{'group_by':'gender'}"/>
+                        <filter string="Age" icon="terp-partner" domain="[]" context="{'group_by':'age'}"/>
+                    </group>
+               </search>
+            </field>
+        </record>
+
+    </data>
+</openerp>

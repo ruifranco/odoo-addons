@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+
+
+    <data noupdate="1">
+        <record id="clothing_sizes_general_xxs" model="clothing_sizes.sizes">
+            <field name="name">Really extra short</field>
+            <field name="code">XXS</field>
+        </record>
+        <record id="clothing_sizes_general_xs" model="clothing_sizes.sizes">
+            <field name="name">Extra short</field>
+            <field name="code">XS</field>
+        </record>
+        <record id="clothing_sizes_general_s" model="clothing_sizes.sizes">
+            <field name="name">Short</field>
+            <field name="code">S</field>
+        </record>
+        <record id="clothing_sizes_general_m" model="clothing_sizes.sizes">
+            <field name="name">Medium</field>
+            <field name="code">M</field>
+        </record>
+        <record id="clothing_sizes_general_L" model="clothing_sizes.sizes">
+            <field name="name">Large</field>
+            <field name="code">L</field>
+        </record>
+        <record id="clothing_sizes_general_XL" model="clothing_sizes.sizes">
+            <field name="name">Extra large</field>
+            <field name="code">XL</field>
+        </record>
+        <record id="clothing_sizes_general_XXL" model="clothing_sizes.sizes">
+            <field name="name">Really extra large</field>
+            <field name="code">XXL</field>
+        </record>
+    </data>    
+
+
+</openerp>

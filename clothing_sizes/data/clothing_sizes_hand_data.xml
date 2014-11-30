@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+
+    <!-- hand sizes -->
+    <data noupdate="1">
+
+        <record id="clothing_sizes_hands_55" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">5,5</field>
+            <field name="code">5,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+       <record id="clothing_sizes_hands_6" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">6</field>
+            <field name="code">6</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+       <record id="clothing_sizes_hands_65" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">6,5</field>
+            <field name="code">6,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+                         
+       <record id="clothing_sizes_hands_65" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">7</field>
+            <field name="code">7</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+        
+        <record id="clothing_sizes_hands_75" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">7,5</field>
+            <field name="code">7,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+        
+        <record id="clothing_sizes_hands_8" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">8</field>
+            <field name="code">8</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+        
+        <record id="clothing_sizes_hands_85" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">8,5</field>
+            <field name="code">8,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+        
+        <record id="clothing_sizes_hands_9" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">9</field>
+            <field name="code">9</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+        
+        <record id="clothing_sizes_hands_95" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">9,5</field>
+            <field name="code">9,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','United Kingdom','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+    </data>
+
+    <data noupdate="1">
+    
+        <!-- universal -->
+        <record id="clothing_sizes_hands_xxs" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">XXS</field>
+            <field name="code">Really extra short</field>
+        </record>
+        <record id="clothing_sizes_hands_xs" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">XS</field>
+            <field name="code">Extra short</field>
+        </record>
+        <record id="clothing_sizes_hands_s" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">S</field>
+            <field name="code">Short</field>
+        </record>
+        <record id="clothing_sizes_hands_m" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">M</field>
+            <field name="code">Medium</field>
+        </record>
+        <record id="clothing_sizes_hands_l" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">L</field>
+            <field name="code">Large</field>
+        </record>
+        <record id="clothing_sizes_hands_xl" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">XL</field>
+            <field name="code">Extra large</field>
+        </record>
+        <record id="clothing_sizes_hands_xxl" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_hands"/>
+            <field name="name">XXL</field>
+            <field name="code">Really extra large</field>
+        </record>
+
+    </data>
+</openerp>

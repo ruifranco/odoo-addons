@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+
+    <!-- feet sizes -->
+    <data noupdate="1">
+
+        <record id="clothing_sizes_feet_39" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">39</field>
+            <field name="code">39</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_395" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">39,5</field>
+            <field name="code">39,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_40" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">40</field>
+            <field name="code">40</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_405" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">40,5</field>
+            <field name="code">40,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_41" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">41</field>
+            <field name="code">41</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_415" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">41,5</field>
+            <field name="code">41,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_42" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">42</field>
+            <field name="code">42</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_425" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">42,5</field>
+            <field name="code">42,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_43" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">43</field>
+            <field name="code">43</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_435" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">43,5</field>
+            <field name="code">43,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_44" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">44</field>
+            <field name="code">44</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_445" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">44,5</field>
+            <field name="code">44,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_45" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">45</field>
+            <field name="code">45</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_455" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">45,5</field>
+            <field name="code">45,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_46" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">46</field>
+            <field name="code">46</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_465" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">46,5</field>
+            <field name="code">46,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_47" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">47</field>
+            <field name="code">47</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_475" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">47,5</field>
+            <field name="code">47,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_48" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">48</field>
+            <field name="code">48</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_485" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">48,5</field>
+            <field name="code">48,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_49" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">49</field>
+            <field name="code">49</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_495" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">49,5</field>
+            <field name="code">49,5</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+        <record id="clothing_sizes_feet_50" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_feet"/>
+            <field name="name">50</field>
+            <field name="code">50</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+    </data>
+    
+</openerp>

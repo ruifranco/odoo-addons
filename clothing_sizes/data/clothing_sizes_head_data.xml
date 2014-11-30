@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+
+    <!-- head sizes -->
+    <data noupdate="1">
+
+        <record id="clothing_sizes_head_5253" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_head"/>
+            <field name="name">52-53</field>
+            <field name="code">52-53</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+       <record id="clothing_sizes_head_5455" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_head"/>
+            <field name="name">54-55</field>
+            <field name="code">54-55</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+
+       <record id="clothing_sizes_head_5657" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_head"/>
+            <field name="name">56-57</field>
+            <field name="code">56-57</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+                         
+       <record id="clothing_sizes_head_5859" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_head"/>
+            <field name="name">58-59</field>
+            <field name="code">58-59</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+        
+        <record id="clothing_sizes_head_6061" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_head"/>
+            <field name="name">60-61</field>
+            <field name="code">60-61</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+        
+        <record id="clothing_sizes_head_6162" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_head"/>
+            <field name="name">61-62</field>
+            <field name="code">61-62</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+        
+        <record id="clothing_sizes_head_6263" model="clothing_sizes.sizes">
+            <field name="type_id" ref="clothing_sizes.clothing_sizes_types_head"/>
+            <field name="name">62-63</field>
+            <field name="code">62-63</field>
+            <field name="country_ids" model="res.country" search="[
+            ('name','in',['Portugal','Spain','France','Germany','Ireland','Belgium','Netherlands','Luxembourg','Austria','Bulgaria'
+            ,'Croatia','Cyprus','Denmark','Slovakia','Slovenia','Estonia','Finland','Greece','Hungary','Italy','Latvia','Lithuania','Malta'
+            ,'Poland','Romania','Sweden','Chech Republic'])]"/>
+        </record>
+    </data>
+    
+</openerp>

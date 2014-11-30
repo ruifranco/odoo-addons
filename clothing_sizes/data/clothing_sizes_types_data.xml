@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+
+    <!-- base types -->
+    <data noupdate="1">
+        <record id="clothing_sizes_types_hands" model="clothing_sizes.types"><field name="name">Hands</field></record>
+        <record id="clothing_sizes_types_shirt" model="clothing_sizes.types"><field name="name">Shirt</field></record>
+        <record id="clothing_sizes_types_trousers" model="clothing_sizes.types"><field name="name">Trousers</field></record>
+        <record id="clothing_sizes_types_head" model="clothing_sizes.types"><field name="name">Head</field></record>
+        <record id="clothing_sizes_types_bra" model="clothing_sizes.types"><field name="name">Bra</field></record>
+        <record id="clothing_sizes_types_bra_cup" model="clothing_sizes.types"><field name="name">Bra (cup)</field></record>
+        <record id="clothing_sizes_types_feet" model="clothing_sizes.types"><field name="name">Feet</field></record>
+        <record id="clothing_sizes_types_harness" model="clothing_sizes.types"><field name="name">Harness</field></record>
+    </data>
+    
+</openerp>

@@ -1,0 +1,162 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* clothing_sizes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-ee69792\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-30 12:58+0000\n"
+"PO-Revision-Date: 2014-11-30 12:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clothing_sizes
+#: field:clothing_sizes.sizes,active:0
+#: field:clothing_sizes.types,active:0
+msgid "Active"
+msgstr ""
+
+#. module: clothing_sizes
+#: selection:clothing_sizes.sizes,age:0
+msgid "Adult"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.view_clothing_sizes_filter
+#: field:clothing_sizes.sizes,age:0
+msgid "Age"
+msgstr ""
+
+#. module: clothing_sizes
+#: selection:clothing_sizes.sizes,age:0
+msgid "Child"
+msgstr ""
+
+#. module: clothing_sizes
+#: model:ir.ui.menu,name:clothing_sizes.menu_config
+msgid "Clothing sizes"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.view_clothing_sizes_filter
+#: field:clothing_sizes.sizes,code:0
+msgid "Code"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.view_clothing_sizes_filter
+#: field:clothing_sizes.sizes,country_ids:0
+msgid "Country"
+msgstr ""
+
+#. module: clothing_sizes
+#: field:clothing_sizes.sizes,create_uid:0
+#: field:clothing_sizes.types,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: clothing_sizes
+#: field:clothing_sizes.sizes,create_date:0
+#: field:clothing_sizes.types,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: clothing_sizes
+#: selection:clothing_sizes.sizes,gender:0
+msgid "Female"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.view_clothing_sizes_filter
+#: field:clothing_sizes.sizes,gender:0
+msgid "Gender"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.view_clothing_sizes_filter
+msgid "Group By..."
+msgstr ""
+
+#. module: clothing_sizes
+#: field:clothing_sizes.sizes,id:0
+#: field:clothing_sizes.types,id:0
+msgid "ID"
+msgstr ""
+
+#. module: clothing_sizes
+#: field:clothing_sizes.sizes,write_uid:0
+#: field:clothing_sizes.types,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: clothing_sizes
+#: field:clothing_sizes.sizes,write_date:0
+#: field:clothing_sizes.types,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: clothing_sizes
+#: selection:clothing_sizes.sizes,gender:0
+msgid "Male"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.view_clothing_sizes_filter
+#: field:clothing_sizes.sizes,name:0
+#: field:clothing_sizes.types,name:0
+msgid "Name"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.view_clothing_sizes_filter
+msgid "Search size"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.clothing_sizes_view_sizes_form
+#: view:clothing_sizes.sizes:clothing_sizes.clothing_sizes_view_sizes_tree
+#: model:ir.actions.act_window,name:clothing_sizes.open_clothing_sizes_view_sizes_tree
+#: model:ir.ui.menu,name:clothing_sizes.menu_open_clothing_sizes_view_sizes_tree
+msgid "Sizes"
+msgstr ""
+
+#. module: clothing_sizes
+#: model:ir.model,name:clothing_sizes.model_clothing_sizes_sizes
+msgid "Sizes for clothing"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.sizes:clothing_sizes.view_clothing_sizes_filter
+#: field:clothing_sizes.sizes,type_id:0
+msgid "Type"
+msgstr ""
+
+#. module: clothing_sizes
+#: view:clothing_sizes.types:clothing_sizes.clothing_sizes_view_types_form
+#: view:clothing_sizes.types:clothing_sizes.clothing_sizes_view_types_tree
+#: model:ir.actions.act_window,name:clothing_sizes.open_clothing_sizes_view_types_tree
+#: model:ir.ui.menu,name:clothing_sizes.menu_open_clothing_sizes_view_types_tree
+msgid "Types"
+msgstr ""
+
+#. module: clothing_sizes
+#: model:ir.model,name:clothing_sizes.model_clothing_sizes_types
+msgid "Types of clothing or parts of the body"
+msgstr ""
+
+#. module: clothing_sizes
+#: code:addons/clothing_sizes/clothing_sizes.py:59
+#, python-format
+msgid "%s cannot be deleted because it is a base type"
+msgstr ""
+
+#. module: clothing_sizes
+#: code:addons/clothing_sizes/clothing_sizes.py:76
+#, python-format
+msgid "%s cannot be deleted because it is a base type"
+msgstr ""
