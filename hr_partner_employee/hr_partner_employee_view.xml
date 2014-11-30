@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record id="hr_partner_employee_view_partner_form" model="ir.ui.view">
+            <field name="name">hr_partner_employee_res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="before">
+                    <field name="employee" readonly="1"/>
+                </xpath>
+                
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="create_employee" string="Create employee" type="object" groups="base.group_user" 
+                            attrs="{'invisible': ['|','|',('employee','=', True),('is_company','=', True),('parent_id','!=', False)]}"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
