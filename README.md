@@ -18,3 +18,6 @@ Domain and filter enforcement in a multicompany environment
 
 [ hr_partner_emoployee ]
 Creates an employee out of a partner
+
+[ event_equipment ]
+Let's you create equipment lists for events and the partners who register
