@@ -8,7 +8,7 @@
         <field name="name">confirm</field>
         <field name="kind">function</field>
         <field name="action">holidays_confirm()</field>
-        <field name="action_id" ref="hr_holidays_reminders.leave_request_manager"/>
+        <field name="action_id" ref="hr_holidays_reminders.hr_holidays_reminders_leave_request_manager"/>
         <field name="split_mode">OR</field>
     </record>
 
@@ -19,7 +19,7 @@
         <field name="name">validate</field>
         <field name="kind">function</field>
         <field name="action">holidays_validate()</field>
-        <field name="action_id" ref="hr_holidays_reminders.leave_approval_employee"/>
+        <field name="action_id" ref="hr_holidays_reminders.hr_holidays_reminders_leave_approval_employee"/>
     </record>
 
 
@@ -30,7 +30,7 @@
         <field name="flow_stop">True</field>
         <field name="kind">function</field>
         <field name="action">holidays_refuse()</field>
-        <field name="action_id" ref="hr_holidays_reminders.leave_refusal_employee"/>
+        <field name="action_id" ref="hr_holidays_reminders.hr_holidays_reminders_leave_refusal_employee"/>
     </record>
 
 </data>
