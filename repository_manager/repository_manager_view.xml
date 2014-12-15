@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="module_readme_creator_module_form">
+            <field name="name">module_readme_creator_module_form</field>
+            <field name="inherit_id" ref="base.module_form"/>
+            <field name="model">ir.module.module</field>
+            <field name="arch" type="xml">
+				<xpath expr="//page[@string='Technical Data']" position="after">
+                    <page string="Repository" name="repository">
+				        <button name="button_create_readme_file" string="Create README" type="object"/>
+				    </page>
+				</xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
