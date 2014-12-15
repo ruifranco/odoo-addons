@@ -1,9 +1,9 @@
 [ NAME ]
-event_work
+clothing_sizes
 
 
 [ SUMMARY ]
-Events - work
+Clothing sizes
 
 
 [ AUTHOR ]
@@ -19,7 +19,7 @@ http://pt.linkedin.com/in/ruipedrosafranco
 
 
 [ CATEGORY ]
-Events
+Technical Settings
 
 
 [ LICENSE ]
@@ -27,7 +27,7 @@ AGPL-3
 
 
 [ DESCRIPTION ]
-This will let you associate a project-task work line with an event so that you will know what work was done during that specific event.
+Allows to define clothing sizes according to country rules
 
 
 [ MENUS ]

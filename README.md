@@ -1,23 +1,51 @@
-odoo-addons
-===========
+[ NAME ]
+event_equipment
 
-[ clothing_sizes ]
-Definition of clothing sizes
 
-[ event_invitation ]
-Provides an easy way to invite partners to your events
+[ SUMMARY ]
+Events - equipment
 
-[ event_work ]
-Association between task work and events
 
-[ hr_holiday_reminders ]
-Sets reminders related to employee's leaves
+[ AUTHOR ]
+Rui Pedrosa Franco
 
-[ multicompany_enforcement_account_voucher ]
-Domain and filter enforcement in a multicompany environment
 
-[ hr_partner_emoployee ]
-Creates an employee out of a partner
+[ VERSION ]
 
-[ event_equipment ]
-Let's you create equipment lists for events and the partners who register
+
+
+[ WEBSITE ]
+http://pt.linkedin.com/in/ruipedrosafranco
+
+
+[ CATEGORY ]
+Extra Tools
+
+
+[ LICENSE ]
+AGPL-3
+
+
+[ DESCRIPTION ]
+
+                        - Allows to define lists of equipment associated to an event
+                        - Partners may define what kind of equipment they possess (from the ones associated to any event they have registered in)
+                        - Equipment can be associated to the attendants or to the event itself
+                        - Partner field is shown in the event's registration lines
+                        - Equipment lists can be associated to event types
+                        - Event type becomes mandatory
+                        
+                        NOTE:
+                        - (event.event) equipment_host_text and equipment_participants_text hold the equipment list as text
+                        
+
+
+[ MENUS ]
+
+
+
+[ VIEWS ]
+
+
+
+[ REPORTS ]
