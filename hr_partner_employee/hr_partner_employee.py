@@ -36,7 +36,7 @@ class res_users(osv.osv):
 
     def random_password(self, cr, uid):
         characters = string.ascii_letters + string.punctuation  + string.digits
-        return "".join(choice(characters) for x in range(randint(8, 16)))
+        return ''.join(choice(characters) for x in range(randint(8, 16)))
 
 res_users()
 
@@ -73,12 +73,12 @@ class res_partner(osv.osv):
 
         if isinstance(partner_id,(list,tuple)):
             partner_id=partner_id[0]
-        
-        if partner_id:
+ 
+        if partner_id and not self.partner_has_employee(cr, uid, partner_id):
             res=self.browse(cr, uid, partner_id)
             if res:
                 objE=self.pool.get('hr.employee')
-                
+        
                 employee={
                         'name'              : res.name,
                         'country_id'        : res.country_id.id,
@@ -86,7 +86,7 @@ class res_partner(osv.osv):
                         'work_email'        : res.email,
                         'address_home_id'   : partner_id,
                         }
-
+                
                 employee_id=objE.create(cr, uid, employee)
 
                 if employee_id:
@@ -120,13 +120,15 @@ class hr_employee(osv.osv):
         if employee_id:
             res=self.browse(cr, uid, employee_id)
             if res:
-            
                 objU=self.pool.get('res.users')
-            
+
+                #check for the existence of a user with the same email
+                if res.work_email and objU.search(cr, uid, [('email','=',res.work_email)]):
+                    raise osv.except_osv(_('Error!'), _("There's already a user using %s.\nIt will not be possible to create an employee nor a user." % (res.work_email)))
+                    
                 user={
                     'name'      : res.name,
                     'company_id': res.company_id.id,
-                    'image'     : res.image,
                     }        
 
                 #what shall be the user login?
