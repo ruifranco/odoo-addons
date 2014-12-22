@@ -31,16 +31,6 @@ import string
 from random import *
 
 
-class res_users(osv.osv):
-    _inherit = 'res.users'
-
-    def random_password(self, cr, uid):
-        characters = string.ascii_letters + string.punctuation  + string.digits
-        return ''.join(choice(characters) for x in range(randint(8, 16)))
-
-res_users()
-
-
 class res_partner(osv.osv):
     _inherit = 'res.partner'
 
