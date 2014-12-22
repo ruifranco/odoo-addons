@@ -75,23 +75,50 @@ class res_partner(osv.osv):
             partner_id=partner_id[0]
  
         if partner_id and not self.partner_has_employee(cr, uid, partner_id):
-            res=self.browse(cr, uid, partner_id)
-            if res:
-                objE=self.pool.get('hr.employee')
+            partner_res=self.browse(cr, uid, partner_id)
+            if partner_res:
+                employee_obj=self.pool.get('hr.employee')
         
                 employee={
-                        'name'              : res.name,
-                        'country_id'        : res.country_id.id,
-                        'image'             : res.image,
-                        'work_email'        : res.email,
+                        'name'              : partner_res.name,
+                        'country_id'        : partner_res.country_id.id,
+                        'image'             : partner_res.image,
+                        'work_email'        : partner_res.email,
                         'address_home_id'   : partner_id,
                         }
                 
-                employee_id=objE.create(cr, uid, employee)
+                employee_id=employee_obj.create(cr, uid, employee)
 
                 if employee_id:
                     cr.execute('UPDATE res_partner SET employee=TRUE WHERE id=%s' % (partner_id))
 
+                    #checks for the existence of a user associated to this partner
+                    user_obj=self.pool.get('res.users')
+                    
+                    if not user_obj.search(cr, uid, [('partner_id','=',partner_id)]):
+
+                        #check for the existence of a user with the same email
+                        if partner_res.email and user_obj.search(cr, uid, [('email','=',partner_res.email)]):
+                            raise osv.except_osv(_('Error!'), _("There's already a user using %s.\nIt will not be possible to create a user." % (partner_res.email)))
+                        
+                        #there's no user, so, we'll create one
+                        user_exists=True
+                        while user_exists:        
+                            if partner_res.email:
+                                user_login=partner_res.email
+                            else:
+                                user_login=str(uuid.uuid4())[:64]
+
+                            user_exists=user_obj.search(cr, uid, [('login','=',user_login)])
+                        
+                        user_id=user_obj.create(cr, uid, {
+                                                'partner_id' : partner_id,
+                                                'company_id' : partner_res.company_id.id,
+                                                'login'      : user_login,
+                                                })
+                                                
+                        #now, we put the user in the employee
+                        employee_obj.write(cr, uid, employee_id, {'user_id':user_id})
         return employee_id
         
 
@@ -100,68 +127,20 @@ class res_partner(osv.osv):
         employee_id=False
         
         if partner_id:
-            employee_id=self.pool.get('hr.employee').search(cr, uid, [('address_home_id','=',partner_id)])
-            if employee_id:
-                if isinstance(employee_id,(list,tuple)):
-                    employee_id=employee_id[0]
+            #is there an employee whose user_id is related to the partner?
+            
+            partner_user=self.pool.get('res.users').search(cr, uid, [('partner_id','=',partner_id)])
+            if partner_user:
+
+                employee_id=self.pool.get('hr.employee').search(cr, uid, [('user_id','=',partner_user)])
+
+                if employee_id:
+                    if isinstance(employee_id,(list,tuple)):
+                        employee_id=employee_id[0]
     
+        #raise osv.except_osv(_('Error!'), _(employee_id))
         return employee_id
 
 res_partner()
 
-
-class hr_employee(osv.osv):
-    _inherit = 'hr.employee'
-
-
-    def create_user_from_employee(self, cr, uid, employee_id=False):
-        user_id=False
-        
-        if employee_id:
-            res=self.browse(cr, uid, employee_id)
-            if res:
-                objU=self.pool.get('res.users')
-
-                #check for the existence of a user with the same email
-                if res.work_email and objU.search(cr, uid, [('email','=',res.work_email)]):
-                    raise osv.except_osv(_('Error!'), _("There's already a user using %s.\nIt will not be possible to create an employee nor a user." % (res.work_email)))
-                    
-                user={
-                    'name'      : res.name,
-                    'company_id': res.company_id.id,
-                    }        
-
-                #what shall be the user login?
-                user_exists=True
-                while user_exists:        
-                    if res.work_email:
-                        user['login']=user['email']=res.work_email
-                    else:
-                        user['login']=str(uuid.uuid4())[:64]
-
-                    user_exists=objU.search(cr, uid, [('login','=',user['login'])])
-
-                
-                #the user's language becomes the same as the company's
-                if res.company_id.partner_id:
-                    if res.company_id.partner_id.lang:
-                        user['lang']=res.company_id.partner_id.lang
-
-                user['password']=objU.random_password(cr, uid)
-
-                user_id=objU.create(cr, uid, user)
-        
-        return user_id
-    
-
-    def create(self, cr, uid, vals, context=None):
-        employee_id=super(hr_employee, self).create(cr, uid, vals, context=context)
-        
-        user_id=self.create_user_from_employee(cr, uid, employee_id)
-        if user_id:
-            self.write(cr, uid, employee_id, {'user_id':user_id})
-        
-        return employee_id
-    
-hr_employee()
 

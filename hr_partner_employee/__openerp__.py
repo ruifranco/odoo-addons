@@ -29,7 +29,6 @@
                         Deals with the connection between Partners and Employees\n\n
                         - one can create an employee from the partner's form\n
                         - shows the 'employee' field in the partner's form (readonly)\n
-                        - when an employee is created, a user is also created\n
                         """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
