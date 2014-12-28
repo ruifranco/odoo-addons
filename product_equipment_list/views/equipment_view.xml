@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_product_equipment_form">
+            <field name="name">Equipment list</field>
+            <field name="model">product.equipment</field>
+            <field name="arch" type="xml">
+                <form string="Equipment list">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            
+                            <field name="equipment_lines" nolabel="1" widget="one2many_list" colspan="4">
+                                <tree string="Equipment Lines" editable="bottom">
+                                    <field name="categ_id"/>
+                                    <field name="qty"/>
+                                    <field name="notes"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </form>
+            </field>    
+        </record>
+        
+
+
+        <record model="ir.ui.view" id="view_event_equipment_tree">
+            <field name="name">Equipment list</field>
+            <field name="model">product.equipment</field>
+            <field name="arch" type="xml">
+                <tree string="Equipment lists">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_event_equipment" model="ir.actions.act_window">
+            <field name="name">Equipment list</field>
+            <field name="res_model">product.equipment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem name="Equipment" id="menu_event_equipment" parent="base.menu_product" action="action_event_equipment"/>
+        
+    </data>
+</openerp>
