@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report 
+            id="report_equipmenthost"
+            string="Equipment (host)"
+            model="event.event" 
+            report_type="qweb-pdf"
+            file="event_equipment.report_equipment_host" 
+            name="event_equipment.report_equipment_host"/>
+
+    </data>
+</openerp>

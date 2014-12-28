@@ -27,50 +27,19 @@ from openerp import models, fields, api, _
 from openerp import tools
 
 
+class event_type(models.Model):
+    _inherit='event.type' 
 
-
-class product_equipment(models.Model):
-    _name = 'product.equipment'
-
-
-    @api.one
-    @api.depends('equipment_lines')
-    def _get_equipment_text(self):
-        fsep = '|'
-        lsep = '\n'
-
-        aux=_('Category') + fsep + _('Quantity') + fsep + _('Mandatory') + fsep + _('Comments') + lsep
-        for l in self.equipment_lines:
-            categ_name=self.pool.get('product.category').name_get(self._cr, self._uid, l.categ_id.id)
-            if isinstance(categ_name,(list,tuple)):
-                categ_name=categ_name[0]
-                if isinstance(categ_name,(list,tuple)):
-                    categ_name=categ_name[1]
-                
-            aux+=_(categ_name) + fsep + str(l.qty) + fsep + _(l.mandatory) + fsep + _(l.notes) + lsep
-                
-        self.equipment_text = aux
-
+    equipment_ids = fields.Many2many('product.equipment',
+        'product_equipment_event_type_rel', 'equipment_id', 'event_type_id', string='Equipment list')
+        
+    equipment_ids_text = fields.Char('Equipment lists', compute='_get_equipment_lists')
     
-    name              = fields.Char(string='Name', size=100, required=True)
-    event_type_id     = fields.Many2one('event.type',string='Event type')
-    equipment_lines   = fields.One2many('product.equipment.lines','equipment_id',string='Equipment lines', required=True)
-
-    #this field contains the equipment_lines as one piece of text
-    equipment_text    = fields.Text(string='Equipment', compute='_get_equipment_text')
-
-
-
-
-
-
-
-class product_equipment_line(models.Model):
-    _name = 'product.equipment.lines'
-
-    equipment_id  = fields.Many2one('product.equipment',string='Equipment list')
-    categ_id      = fields.Many2one('product.category',string='Category', required=True)
-    qty           = fields.Integer(string='Quantity', required=True, default=1)  
-    mandatory     = fields.Boolean(string='Mandatory')  
-    notes         = fields.Char(string='Comments', size=255)
-   
+    @api.one
+    @api.onchange('equipment_ids')
+    def _get_equipment_lists(self):
+        aux=[]
+        for e in self.equipment_ids:
+            aux.append(e.name)
+        
+        self.equipment_ids_text='\n'.join(aux)

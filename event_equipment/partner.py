@@ -34,41 +34,28 @@ class res_partner(orm.Model):
         'equipment_ids'  : fields.one2many('res.partner.equipment', 'partner_id', 'Equipment'),
         }
   
+    #returns an array of tuples (categ_id, quantity)
+    def _get_partner_equipment(self, cr, uid, partner_id):
+        partner_equip=[]
+        if partner_id:
+            partner_equip_obj=self.pool.get('res.partner.equipment')
+            partner_equip_ids=partner_equip_obj.search(cr, uid, [('partner_id','=',partner_id)])
+            if partner_equip_ids:
+                partner_equip_res=partner_equip_obj.browse(cr, uid, partner_equip_ids)
+                for peq in partner_equip_res:
+                    partner_equip.append((peq.categ_id.id,peq.qty))
+        return partner_equip
+          
+  
   
 class res_partner_equipment(orm.Model):
     _name='res.partner.equipment'
     
-    """
-    def _get_allowed_categories(self, cr, uid, context=None):
-        res=[]
-        equip_obj=self.pool.get('event.equipment.lines')
-        lines_ids=equip_obj.search(cr, uid, [('type','=','participant')])
-        #raise osv.except_osv('Warning!',str(categ_ids))
-        if lines_ids:
-            lines_res=equip_obj.browse(cr, uid, lines_ids)
-            for l in lines_res:
-                aux=(l.categ_id.id,self.pool.get('product.category').name_get(cr,uid,l.categ_id.id))
-                if not aux in res:
-                    res.append(aux)
-        return res    
-    """                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-    
-    #funções create e write para lidar com os dados e gravar o categ_id
-    
-    """
-    def create(self, cr, uid, data, context=None):
-        data['qty']=5
-            return super(res_partner_equipment, self).create(cr, uid, data, context)
-    """
-    
     _columns={
-        'partner_id'        : fields.many2one('res.partner','Partner', required=True),
-
-        'categ_id'          : fields.many2one('product.category','Category', readonly=True),
-        #'categ_id_domain'   : fields.selection(_get_allowed_categories,'Category domain'),
-
-        'qty'               : fields.integer('Quantity'),    
-        'notes'             : fields.char('Comments', size=255),        
+        'partner_id': fields.many2one('res.partner','Partner', required=True),
+        'categ_id'  : fields.many2one('product.category','Category', readonly=True),
+        'qty'       : fields.integer('Quantity'),    
+        'notes'     : fields.char('Comments', size=255),        
     }
     _defaults={
         'qty': 0,

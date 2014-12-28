@@ -24,6 +24,7 @@
     'name'          : 'Events - equipment',
 	'version'       : '1.0',
 	'category'      : 'Extra Tools',
+    'summary'       : 'Management of equipment lists for events',
 	'description'   : """
                         - Allows to define lists of equipment associated to an event
                         - Partners may define what kind of equipment they possess (from the ones associated to any event they have registered in)
@@ -31,6 +32,7 @@
                         - Partner field is shown in the event's registration lines
                         - Equipment lists can be associated to event types
                         - Event type becomes mandatory
+                        - More fields are shown in the event type tree view
                         
                         NOTE:
                         - (event.event) equipment_host_text and equipment_participants_text hold the equipment list as text
@@ -38,15 +40,19 @@
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
 	'depends'       : [
-	                   'product',
+	                   'product_equipment_list',
 	                   'event',
 	                   ],
 	'data'          : [
 	                   'security/ir.model.access.csv',
 	
-	                   'equipment_view.xml',
-	                   'event_view.xml',
-	                   'partner_view.xml',
+	                   'views/event_view.xml',
+	                   'views/partner_view.xml',
+	                   
+                       'views/report_equipment_host.xml',
+	                   'equipment_report.xml',
+	                   
+	                   
 	                   ],
     'installable'   : True,
     'active'        : False,

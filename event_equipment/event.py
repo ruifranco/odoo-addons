@@ -22,9 +22,11 @@
 ##############################################################################
 
 from openerp import addons
-from openerp.osv import orm
+from openerp.osv import osv, orm
 from openerp import models, fields, api, _
 from openerp import tools
+
+
 
 
 
@@ -108,12 +110,28 @@ class event_event(models.Model):
                     'mandatory' : l.mandatory,
                     'notes'     : l.notes,
                     })
-        self.equipment_participants_id=False            
-        self.equipment_participants_ids=eq            
+        self.equipment_participants_id=False
+        self.equipment_participants_ids=eq
   
-  
-  
-  
+"""  
+class event_event(orm.Model):
+    _inherit='event.event' 
+
+    def on_change_type(self, cr, uid, ids, type):
+        res = {}
+        
+        raise osv.except_osv('Warning!','maria')
+        
+        if type:
+            res.setdefault('domain', {})
+        
+            equipment_res=self.pool.get('event.type').browse(cr, uid, type)
+            if equipment_res:
+                res['domain']['equipment_host_id']=[('id','in',equipment_res.equipment_ids)]
+            
+            
+        return res
+"""  
   
 class event_equipment_lines(models.Model):
     _name='event.equipment.lines'
@@ -125,6 +143,7 @@ class event_equipment_lines(models.Model):
     notes     = fields.Char(string='Comments', size=255)        
     checked   = fields.Boolean(string='Checked')    
     type      = fields.Selection([('participant','Participant'),('host','Host')],'Type', select=True)
+
 
   
 class event_equipment_lines_host(models.Model):
@@ -143,33 +162,98 @@ class event_equipment_lines_participants(models.Model):
 
 
 
-
-
 class event_registration(orm.Model):
     _inherit = 'event.registration'
     
+    #to be used with the @api
+    def _get_partner_equipment(self, cr, uid, partner_id):
+        return self.pool.get('res.partner')._get_partner_equipment(cr, uid, partner_id)
+
+
     def create(self, cr, uid, data, context=None):
         if 'partner_id' in data:
             #we create the equipment lines in the partner's record
             event_res=self.pool.get('event.event').browse(cr, uid, data['event_id'])
             
-            #we load the equipment the partner has
-            partner_equip=[]
-            partner_equip_obj=self.pool.get('res.partner.equipment')
-            partner_equip_ids=partner_equip_obj.search(cr, uid, [('partner_id','=',data['partner_id'])])
-            if partner_equip_ids:
-                partner_equip_res=partner_equip_obj.browse(cr, uid, partner_equip_ids)
-                for peq in partner_equip_res:
-                    partner_equip.append(peq.categ_id.id)
-            
             #we create the equipment lines for the partner
+            partner_equip=self.pool.get('res.partner')._get_partner_equipment(cr, uid, data['partner_id'])
             for ev in event_res:
                 for eqp in ev.equipment_participants_ids:
-                    if eqp.categ_id.id not in partner_equip:
-                        partner_equip_obj.create(cr, uid, {
+                    equip_found=False
+                    for pequip in partner_equip:
+                        if pequip[0]==eqp.categ_id.id:
+                            equip_found=True
+                            break
+                    
+                    if not equip_found:
+                        self.pool.get('res.partner.equipment').create(cr, uid, {
                                          'partner_id': data['partner_id'],
                                          'categ_id'  : eqp.categ_id.id,
                                          'qty'       : 0,
                                          })
-            
+
         return super(event_registration, self).create(cr, uid, data, context)
+
+
+
+    @api.one
+    def check_lacking_equipment_partner(self):
+        lacking_equipment=[]
+    
+        if self.event_id.equipment_participants_ids and self.partner_id:
+            partner_equip=self._get_partner_equipment(self.partner_id.id)
+
+            #for each line of equipment defined for this event...
+            for eqp in self.event_id.equipment_participants_ids:
+                
+                equip_found=False
+                
+                #does the participant have enough quantity?
+                for pequip in partner_equip:
+                    if pequip[0]==eqp.categ_id.id:
+                        if pequip[1]<eqp.qty:
+                            diff=eqp.qty-pequip[1]
+                            lacking_equipment.append((eqp.categ_id.id, diff))
+                        equip_found=True
+                        break
+                
+                if not equip_found:
+                    lacking_equipment.append((eqp.categ_id.id, eqp.qty))
+
+        return lacking_equipment
+
+
+    #converts a list of lacking equipment to text 
+    def build_list_lacking_equipment(self, lacking_equipment):
+        if lacking_equipment:
+            res=[]
+            
+            for eq in lacking_equipment:
+                categ_name=self.pool.get('product.category').name_get(self._cr, self._uid, eq[0])
+                if isinstance(categ_name,(list,tuple)):
+                    categ_name=categ_name[0]
+                    if isinstance(categ_name,(list,tuple)):
+                        categ_name=categ_name[1]
+
+                res.append(categ_name + ' => ' + str(eq[1]))
+                
+            aux='\n'.join(res)
+            res=aux    
+        else:
+            res=''
+    
+        return res
+        
+        
+    @api.one
+    def show_lacking_equipment_partner(self):
+        lacking_equipment=self.check_lacking_equipment_partner()
+        if isinstance(lacking_equipment,(list)):
+            lacking_equipment=lacking_equipment[0]
+        
+        if lacking_equipment:
+            aux=self.build_list_lacking_equipment(lacking_equipment)
+            msg=_('%s is lacking:') % _(self.partner_id.name)
+            raise osv.except_osv(_('Equipment check!'), msg + '\n\n' + _(aux))
+        else:
+            raise osv.except_osv(_('Equipment check!'),_('%s lacks no equipment') % _(self.partner_id.name))

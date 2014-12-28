@@ -1,6 +1,4 @@
 "id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_product_equipment","product.equipment","model_product_equipment",,1,1,1,1
-"access_product_equipment_lines","product.equipment.lines","model_product_equipment_lines",,1,1,1,1
 "access_event_equipment_lines","event.equipment.lines","model_event_equipment_lines","event.group_event_user",1,1,1,1
 "access_event_equipment_lines_host","event.equipment.lines_host","model_event_equipment_lines_host","event.group_event_user",1,1,1,1
 "access_event_equipment_lines_participants","event.equipment.lines_participants","model_event_equipment_lines_participants","event.group_event_user",1,1,1,1

@@ -11,7 +11,7 @@ Rui Pedrosa Franco
 
 
 [ VERSION ]
-
+8.0.1.0
 
 
 [ WEBSITE ]
@@ -34,6 +34,7 @@ AGPL-3
                         - Partner field is shown in the event's registration lines
                         - Equipment lists can be associated to event types
                         - Event type becomes mandatory
+                        - More fields are shown in the event type tree view
                         
                         NOTE:
                         - (event.event) equipment_host_text and equipment_participants_text hold the equipment list as text
@@ -45,7 +46,13 @@ AGPL-3
 
 
 [ VIEWS ]
-
+* INHERIT event_equipment_view_event_form (form)
+* INHERIT event_equipment_view_event_type_form (form)
+* INHERIT event_equipment_view_event_type_tree (tree)
+* INHERIT event_equipment_view_partner_form (form)
+report_equipment_host (qweb)
+report_equipment_host_document (qweb)
 
 
 [ REPORTS ]
+Equipment (host)
