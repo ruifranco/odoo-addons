@@ -8,8 +8,15 @@
             <field name="model">event.type</field>
             <field name="inherit_id" ref="event.view_event_type_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='default_email_registration']" position="after">
-                    <field name="equipment_ids"/>
+                <xpath expr="//form[@string='Event Type']" position="inside">
+                    <notebook>
+                        <page string="Equipment lists">
+                            <group col="4">
+                                <field name="equipment_host_ids" string="Host"/>
+                                <field name="equipment_participants_ids" string="Participants"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </xpath>
             </field>
         </record>
@@ -20,7 +27,8 @@
             <field name="inherit_id" ref="event.view_event_type_tree"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="equipment_ids_text"/>
+                    <field name="equipment_host_ids_text"/>
+                    <field name="equipment_participants_ids_text"/>
                 </xpath>
             </field>
         </record>        
