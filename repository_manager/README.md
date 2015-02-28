@@ -7,7 +7,7 @@ Repository manager
 
 
 [ AUTHOR ]
-Multibase
+Rui Pedrosa Franco
 
 
 [ VERSION ]
@@ -15,7 +15,7 @@ Multibase
 
 
 [ WEBSITE ]
-http://www.multibase.pt
+http://pt.linkedin.com/in/ruipedrosafranco
 
 
 [ CATEGORY ]
