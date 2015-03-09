@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+      
+
+    <menuitem name="GPS" id="menu_gps" parent="base.menu_custom"/>
+
+
+    <!-- coordinates -->
+
+    <record model="ir.ui.view" id="view_gps_coords_form">
+        <field name="name">view_gps_coords_form</field>
+        <field name="model">gps_base.coords</field>
+        <field name="arch" type="xml">
+            <form string="Coords">
+                <group>
+                    <group>
+                        <field name="country_id"/><newline/>
+
+                        <field name="latitude_aux" class="oe_edit_only"/>
+                        <field name="longitude_aux" class="oe_edit_only"/>
+                        <field name="format_aux" class="oe_edit_only"/>
+                        
+                        <field name="dd_coords"/>
+                        <field name="ddm_coords"/>
+                        <field name="dms_coords"/>
+                    </group>
+                    <group>
+                        <widget type="gps_base_gmap_marker" lat="latitude_aux" lng="longitude_aux"/>
+                        
+                        <!-- does not work 
+                        (coords holds the name of a many2one field with the id of a gps_base.coords record) 
+                        -->
+                        <!-- 
+                        <widget type="gps_base_gmap_marker" coords="coords_field"/>
+                         -->
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="view_gps_coords_tree">
+        <field name="name">view_gps_coords_tree</field>
+        <field name="model">gps_base.coords</field>
+        <field name="arch" type="xml">
+            <tree string="Coords" toolbar="1">
+                <field name="country_id"/>
+                <field name="dd_coords"/>
+                <field name="ddm_coords"/>
+                <field name="dms_coords"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_view_gps_coords_tree">
+        <field name="name">Coordinates</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gps_base.coords</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_view_gps_coords_tree" id="menu_gps_coords" parent="menu_gps"/>
+
+    </data>
+</openerp>
+
