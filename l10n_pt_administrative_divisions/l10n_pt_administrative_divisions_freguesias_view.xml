@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_l10n_pt_administrative_divisions_freguesias_form">
+            <field name="name">Freguesias</field>
+            <field name="model">l10n_pt_administrative_divisions.freguesias</field>
+            <field name="arch" type="xml">
+                <form string="Freguesias">
+                    <group>
+                        <group>
+                            <field name="country_id"/>
+                            <field name="distrito_id"/>
+                            <field name="concelho_id"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_l10n_pt_administrative_divisions_freguesias_tree">
+            <field name="name">Freguesias</field>
+            <field name="model">l10n_pt_administrative_divisions.freguesias</field>
+            <field name="arch" type="xml">
+                <tree string="Freguesias">
+                    <field name="country_id"/>
+                    <field name="distrito_id"/>
+                    <field name="concelho_id"/>
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_l10n_pt_administrative_divisions_freguesias" model="ir.actions.act_window">
+			<field name="name">Freguesias</field>
+			<field name="res_model">l10n_pt_administrative_divisions.freguesias</field>
+ 			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+    </data>
+</openerp>

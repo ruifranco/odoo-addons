@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_l10n_pt_administrative_divisions_distritos_form">
+            <field name="name">Distritos</field>
+            <field name="model">l10n_pt_administrative_divisions.distritos</field>
+            <field name="arch" type="xml">
+                <form string="Distritos">
+                    <group>
+                        <group>
+                            <field name="country_id"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_l10n_pt_administrative_divisions_distritos_tree">
+            <field name="name">Distritos</field>
+            <field name="model">l10n_pt_administrative_divisions.distritos</field>
+            <field name="arch" type="xml">
+                <tree string="Distritos">
+                    <field name="country_id"/>
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_l10n_pt_administrative_divisions_distritos" model="ir.actions.act_window">
+			<field name="name">Distritos</field>
+			<field name="res_model">l10n_pt_administrative_divisions.distritos</field>
+ 			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+    </data>
+</openerp>
