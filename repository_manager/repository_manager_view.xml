@@ -7,9 +7,32 @@
             <field name="inherit_id" ref="base.module_form"/>
             <field name="model">ir.module.module</field>
             <field name="arch" type="xml">
-				<xpath expr="//page[@string='Technical Data']" position="after">
+				<xpath expr="//page[last()]" position="after">
                     <page string="Repository" name="repository">
-				        <button name="button_create_readme_file" string="Create README" type="object"/>
+                        <group>
+                            <group string="Descriptive file">
+                                <div style="height:200px; border: 5px solid gray; padding: 10px;">
+	                                <div style="height:125px;">
+	                                    Create a README file that can be used - for instance -, in Github, to tell people what this module is all about.
+	                                    The file will show the information held in __openerp__.py
+	                                </div>
+	                                <div style="height:75px; text-align: center;">
+	                                   <button name="button_create_readme_file" string="Create README" type="object"/>
+                                    </div>
+                                </div>
+                            </group>
+                            
+                            <group string="Pack this module">
+                                <div style="height:200px; border: 5px solid gray; padding: 10px;">
+	                                <div style="height:125px;">
+	                                    Create a ZIP file containing this module as well as all its dependencies.
+	                                </div>
+	                                <div style="height:75px; text-align: center;">
+	                                   <button name="button_pack_module" string="Create ZIP" type="object"/>
+	                                </div>
+	                            </div>
+                            </group>
+				        </group>
 				    </page>
 				</xpath>
             </field>

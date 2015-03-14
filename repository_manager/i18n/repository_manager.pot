@@ -1,0 +1,58 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* repository_manager
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-ee69792\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-14 20:36+0000\n"
+"PO-Revision-Date: 2015-03-14 20:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: repository_manager
+#: view:ir.module.module:repository_manager.module_readme_creator_module_form
+msgid "Create README"
+msgstr ""
+
+#. module: repository_manager
+#: view:ir.module.module:repository_manager.module_readme_creator_module_form
+msgid "Create ZIP"
+msgstr ""
+
+#. module: repository_manager
+#: view:ir.module.module:repository_manager.module_readme_creator_module_form
+msgid "Create a README file that can be used - for instance -, in Github, to tell people what this module is all about.\n"
+"	                                    The file will show the information held in __openerp__.py"
+msgstr ""
+
+#. module: repository_manager
+#: view:ir.module.module:repository_manager.module_readme_creator_module_form
+msgid "Create a ZIP file holding this module as well as all its dependencies."
+msgstr ""
+
+#. module: repository_manager
+#: view:ir.module.module:repository_manager.module_readme_creator_module_form
+msgid "Descriptive file"
+msgstr ""
+
+#. module: repository_manager
+#: model:ir.model,name:repository_manager.model_ir_module_module
+msgid "Module"
+msgstr ""
+
+#. module: repository_manager
+#: view:ir.module.module:repository_manager.module_readme_creator_module_form
+msgid "Pack this module"
+msgstr ""
+
+#. module: repository_manager
+#: view:ir.module.module:repository_manager.module_readme_creator_module_form
+msgid "Repository"
+msgstr ""
+

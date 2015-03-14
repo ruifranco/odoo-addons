@@ -11,7 +11,7 @@ Rui Pedrosa Franco
 
 
 [ VERSION ]
-8.0.1.0
+8.0.2.0
 
 
 [ WEBSITE ]
@@ -19,7 +19,7 @@ http://pt.linkedin.com/in/ruipedrosafranco
 
 
 [ CATEGORY ]
-Extra Tools
+Ferramentas extras
 
 
 [ LICENSE ]
@@ -27,11 +27,12 @@ AGPL-3
 
 
 [ DESCRIPTION ]
-In this very early stage, this module will only let you create a README file to be used in a repository manager.
 
-It uses the info on the module to create the file and saves it in the module's folder.
+- creates a README file to be used in repositories to tell people what the module is all about
+- packs a module as well as its dependencies so that it can be deployed anywhere
 
-Check the Repository tab inside any module's form.
+This module assumes you have ZIP installed in your system.
+
 
 
 [ MENUS ]
