@@ -22,7 +22,7 @@
 ##############################################################################
 {
     'name'          : 'GPS - base functions',
-	'version'       : '1.0',
+	'version'       : '1.1',
 	'category'      : 'Extra Tools',
 	'summary'       : 'Base functionalities for the use of GPS coordinates',
 	'description'   : """

@@ -23,7 +23,7 @@ openerp.gps_base = function(instance) {
         start: function() {
             if (typeof google== 'undefined') {
                 window.ginit = this.on_ready;
-                $.getScript('http://maps.googleapis.com/maps/api/js?sensor=false&callback=ginit');        	 
+                $.getScript('http://maps.googleapis.com/maps/api/js?sensor=false&callback=ginit');           
             }
             else {
                 this.on_ready();
@@ -32,6 +32,31 @@ openerp.gps_base = function(instance) {
            self.on("change:effective_readonly", self, function() {
                //self.marker.setDraggable(self.get("effective_readonly") ? false : true);
            });
+        },
+
+
+        render_map: function (self, lat, lng){ 
+            var myLatlng = new google.maps.LatLng(lat, lng); 
+            var mapOptions = { 
+                zoom: 8, 
+                center: myLatlng 
+            };
+
+            var div_gmap = self.$el[0];
+
+            map = new google.maps.Map(div_gmap, mapOptions);
+
+            self.marker = new google.maps.Marker({ 
+                position: myLatlng, 
+                map: map, 
+                draggable:false, 
+            });
+
+            google.maps.event.addListener(self.marker, 'dragend',function(NewPoint){ 
+                lat = NewPoint.latLng.lat(); 
+                lng = NewPoint.latLng.lng(); 
+                self.update_latlng(lat,lng); 
+            }); 
         },
 
     
@@ -72,41 +97,30 @@ openerp.gps_base = function(instance) {
             }
   
   
-            function get_coordinates(coords_id){
-                var def = new $.Deferred();
-                new instance.web.Model("gps_base.coords")
-                    .query(['latitude_aux','longitude_aux'])
-                    .filter([["id", "=", coords_id]])
-                    .first()
-                    .then(function(result) {
-                        if(!result || result.length === 0){
-                            def.reject();
-                        }else{
-                            def.resolve(result);
-                        }
+            function get_coordinates(coords_id, render_map){ 
+                var call_back= render_map 
+                var def = new $.Deferred(); 
+                new instance.web.Model("gps_base.coords") 
+                    .query(['latitude_aux','longitude_aux']) 
+                    .filter([["id", "=", coords_id]]) 
+                    .first() 
+                    .then(function(result) { 
+                        if(!result || result.length === 0){ 
+                            call_back(self, 0, 0); 
+                            def.reject(); 
+                        }else{ 
+                            call_back(self, result['latitude_aux'], result['longitude_aux']); 
+                            def.resolve(); 
+                        } 
                     });
-                    
-                return def.promise();
+
+                return def.promise(); 
             }
   
              
-            //let's read the coordinates and populate the lat/lng vars
-            if (coords){
-                var latitude_aux=0;
-                var longitude_aux=0;
-                
-                /*
-                promise=get_coordinates(coords);
-                
-                while (promise.state()!='resolved'){
-                    latitude_aux = promise['latitude_aux']; 
-                    longitude_aux = promise['longitude_aux']; 
-                    
-                    //this works
-                    //alert("It works\n" + latitude_aux);
-                };
-                alert("It does not work\n" + latitude_aux);   
-                */    
+            //let's read the coordinates and populate the lat/lng vars 
+            if (coords){ 
+                return get_coordinates(coords, this.render_map); 
             }
             
             //VER ISTO
@@ -140,7 +154,7 @@ openerp.gps_base = function(instance) {
                
             
             self.field_manager.on("field_changed:"+self.field_lat, self, self.display_result);
-            self.field_manager.on("field_changed:"+self.field_lng, self, self.display_result);        	
+            self.field_manager.on("field_changed:"+self.field_lng, self, self.display_result);          
             
             //RPF
             self.field_manager.on("field_changed:"+self.field_coords, self, self.display_result);
@@ -187,7 +201,7 @@ openerp.gps_base = function(instance) {
  });
 
 instance.web.form.custom_widgets.add('gps_base_gmap_marker', 'instance.gps_base.gps_base_gmap_marker');
-	 
+     
 instance.web.views.add('gmaps', 'instance.gps_base.gmaps');
 
  
@@ -223,10 +237,10 @@ instance.gps_base.gmaps = instance.web.View.extend({
          
          if (typeof google== 'undefined') {
              window.ginit = this.on_ready;
-             $.getScript('http://maps.googleapis.com/maps/api/js?&sensor=false&callback=ginit');        	 
+             $.getScript('http://maps.googleapis.com/maps/api/js?&sensor=false&callback=ginit');             
          }
          else {
-        	 this.on_ready();
+             this.on_ready();
          }
      },
 
@@ -234,7 +248,7 @@ instance.gps_base.gmaps = instance.web.View.extend({
      on_ready: function() {
  
 
-    	 var myLatlng = new google.maps.LatLng(45, 25);
+         var myLatlng = new google.maps.LatLng(45, 25);
          var mapOptions = {
              zoom: 8,
              center: myLatlng
@@ -257,23 +271,23 @@ instance.gps_base.gmaps = instance.web.View.extend({
      
  
      do_load_record: function(record){
-    	 var self = this;
-    	 _(self.fields_view.arch.children).each(function(data){
-    		 self.do_add_item(data,record)
-    	 });
+         var self = this;
+         _(self.fields_view.arch.children).each(function(data){
+             self.do_add_item(data,record)
+         });
      },
 
      do_add_item: function(item,record){
-    	 var self = this;
-    	 if (item.tag == 'widget' && item.attrs.type == 'gps_base_gmap_marker' ){
+         var self = this;
+         if (item.tag == 'widget' && item.attrs.type == 'gps_base_gmap_marker' ){
 
-        	 var myLatlng = new google.maps.LatLng(record[item.attrs.lat], record[item.attrs.lng]);
+             var myLatlng = new google.maps.LatLng(record[item.attrs.lat], record[item.attrs.lng]);
              var marker = new google.maps.Marker({
                  position: myLatlng,
                  map: map,
                  draggable:false,
-             });     		 
-    	 }
+             });             
+         }
      },
  });
  
