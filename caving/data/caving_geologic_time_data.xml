@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record model="caving.geologic_time" id="caving_geologic_time_1">
+            <field name="name">Quaternary</field>
+        </record>
+        
+        <record model="caving.geologic_time" id="caving_geologic_time_2">
+            <field name="name">Neogene</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_3">
+            <field name="name">Paleogene</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_4">
+            <field name="name">Cretaceous</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_5">
+            <field name="name">Jurassic</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_6">
+            <field name="name">Triasic</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_7">
+            <field name="name">Permian</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_8">
+            <field name="name">Carboniferous</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_8">
+            <field name="name">Devonian</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_9">
+            <field name="name">Silurian</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_10">
+            <field name="name">Ordovician</field>
+        </record>
+
+        <record model="caving.geologic_time" id="caving_geologic_time_11">
+            <field name="name">Cambrian</field>
+        </record>
+
+    </data>
+</openerp>

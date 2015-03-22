@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_caving_cave_reference_form">
+            <field name="name">References</field>
+            <field name="model">caving.cave.reference</field>
+            <field name="arch" type="xml">
+                <form string="Reference">
+                    <group>
+                        <group colspan="4">       
+                            <field name="cave_id"/>
+                            <field name="partner_id"/>
+                            <field name="name"/>
+                            <field name="identification"/>
+                            <field name="url" widget="url"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group colspan="4">
+                            <field name="notes"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_caving_cave_reference_tree">
+            <field name="name">References</field>
+            <field name="model">caving.cave.reference</field>
+            <field name="arch" type="xml">
+                <tree string="References">
+                    <field name="cave_id" invisible="context.get('cave_form',False)"/>
+                    <field name="partner_id"/>
+                    <field name="name"/>
+                    <field name="identification"/>
+                    <field name="url" widget="url"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+		<record id="action_caving_cave_reference" model="ir.actions.act_window">
+			<field name="name">References</field>
+			<field name="res_model">caving.cave.reference</field>
+ 			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+    </data>
+</openerp>

@@ -1,0 +1,810 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* caving
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-ee69792\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-22 07:58+0000\n"
+"PO-Revision-Date: 2015-03-22 07:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: caving
+#: field:caving.cave,has_public_access:0
+msgid "Access is public?"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,condition:0
+msgid "Active"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave,address_ids:0
+msgid "Address"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,aka:0
+msgid "Also know as..."
+msgstr ""
+
+#. module: caving
+#: field:caving.gas,aka:0
+msgid "Also known as..."
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,aka:0
+#: field:caving.flora,aka:0
+msgid "Also knows as..."
+msgstr ""
+
+#. module: caving
+#: selection:caving.fauna,type:0
+msgid "Amphibians"
+msgstr ""
+
+#. module: caving
+#: view:caving.area:caving.view_caving_area_form
+#: field:caving.cave,area_id:0
+#: field:caving.cave.address,area_id:0
+msgid "Area"
+msgstr ""
+
+#. module: caving
+#: view:caving.area:caving.view_caving_area_tree
+#: model:ir.actions.act_window,name:caving.action_caving_area
+#: model:ir.ui.menu,name:caving.menu_caving_area
+msgid "Areas"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,state:0
+msgid "Being explored"
+msgstr ""
+
+#. module: caving
+#: selection:caving.link,type:0
+msgid "Bibliography"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,category:0
+msgid "Category"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave.address,cave_id:0
+#: field:caving.cave.filling,cave_id:0
+#: field:caving.cave.gas_analysis,cave_id:0
+#: field:caving.cave.lithostratigraphy,cave_id:0
+#: field:caving.cave.reference,cave_id:0
+#: view:caving.flora:caving.view_caving_flora_form
+msgid "Cave"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,cave_ids:0
+#: view:caving.cave:caving.view_caving_cave_tree
+#: field:caving.fauna,cave_ids:0
+#: field:caving.flora,cave_ids:0
+#: field:caving.gas,cave_ids:0
+#: model:ir.actions.act_window,name:caving.action_caving_cave
+#: model:ir.ui.menu,name:caving.menu_caving_cave
+#: model:ir.ui.menu,name:caving.menu_caving_main
+msgid "Caves"
+msgstr ""
+
+#. module: caving
+#: model:ir.ui.menu,name:caving.menu_caving_top
+msgid "Caving"
+msgstr ""
+
+#. module: caving
+#: field:caving.gas,colour:0
+msgid "Colour"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_filter
+#: field:caving.cave,condition:0
+msgid "Condition"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,coords_id:0
+#: field:caving.cave.address,coords_id:0
+msgid "Coords"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,country_id:0
+#: field:caving.cave,country_id:0
+#: field:caving.cave.address,country_id:0
+msgid "Country"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,create_uid:0
+#: field:caving.cave,create_uid:0
+#: field:caving.cave.address,create_uid:0
+#: field:caving.cave.filling,create_uid:0
+#: field:caving.cave.gas_analysis,create_uid:0
+#: field:caving.cave.lithostratigraphy,create_uid:0
+#: field:caving.cave.reference,create_uid:0
+#: field:caving.fauna,create_uid:0
+#: field:caving.flora,create_uid:0
+#: field:caving.gas,create_uid:0
+#: field:caving.geologic_time,create_uid:0
+#: field:caving.link,create_uid:0
+#: field:caving.petrography,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,create_date:0
+#: field:caving.cave,create_date:0
+#: field:caving.cave.address,create_date:0
+#: field:caving.cave.filling,create_date:0
+#: field:caving.cave.gas_analysis,create_date:0
+#: field:caving.cave.lithostratigraphy,create_date:0
+#: field:caving.cave.reference,create_date:0
+#: field:caving.fauna,create_date:0
+#: field:caving.flora,create_date:0
+#: field:caving.gas,create_date:0
+#: field:caving.geologic_time,create_date:0
+#: field:caving.link,create_date:0
+#: field:caving.petrography,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.gas_analysis,date:0
+msgid "Date"
+msgstr ""
+
+#. module: caving
+#: help:caving.cave,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,speleometry_deepest_point:0
+msgid "Deepest point"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.filling,name:0
+msgid "Description"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.filling,elevation:0
+msgid "Elevation"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.lithostratigraphy,elevation_from:0
+msgid "Elevation (from)"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.lithostratigraphy,elevation_to:0
+msgid "Elevation (to)"
+msgstr ""
+
+#. module: caving
+#: model:ir.model,name:caving.model_caving_cave
+msgid "Email Thread"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,speleometry_entrance_size_max:0
+msgid "Entrance size (max)"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,speleometry_entrance_size_min:0
+msgid "Entrance size (min)"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: selection:caving.cave,state:0
+msgid "Explored"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave,fauna_ids:0
+#: view:caving.fauna:caving.view_caving_fauna_form
+#: view:caving.fauna:caving.view_caving_fauna_tree
+#: model:ir.actions.act_window,name:caving.action_caving_fauna
+#: model:ir.ui.menu,name:caving.menu_caving_fauna
+msgid "Fauna"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave,filling_ids:0
+msgid "Fillings"
+msgstr ""
+
+#. module: caving
+#: selection:caving.fauna,type:0
+msgid "Fish"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave,flora_ids:0
+#: view:caving.flora:caving.view_caving_flora_tree
+#: model:ir.actions.act_window,name:caving.action_caving_flora
+#: model:ir.ui.menu,name:caving.menu_caving_flora
+msgid "Flora"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.gas_analysis,gas_id:0
+#: view:caving.gas:caving.view_caving_gas_form
+msgid "Gas"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave,gas_analysis_ids:0
+#: view:caving.cave.gas_analysis:caving.view_caving_cave_gas_analysis_form
+#: model:ir.actions.act_window,name:caving.action_caving_cave_gas_analysys
+msgid "Gas analysis"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave.gas_analysis:caving.view_caving_cave_gas_analysis_tree
+#: model:ir.ui.menu,name:caving.menu_caving_cave_gas_analysys
+msgid "Gas analysys"
+msgstr ""
+
+#. module: caving
+#: view:caving.gas:caving.view_caving_gas_tree
+#: model:ir.actions.act_window,name:caving.action_caving_gas
+#: model:ir.ui.menu,name:caving.menu_caving_gas
+msgid "Gases"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.lithostratigraphy,geologic_time_id:0
+msgid "Geologic time"
+msgstr ""
+
+#. module: caving
+#: help:caving.cave.address,sequence:0
+msgid "Gives the sequence order when displaying a list of addresses."
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_filter
+msgid "Group By..."
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,has_animal_remains:0
+msgid "Has animal remains?"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,access_horizontal:0
+msgid "Has horizontal access?"
+msgstr ""
+
+#. module: caving
+#: field:caving.gas,has_smell:0
+msgid "Has smell?"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,access_vertical:0
+msgid "Has vertical access?"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,hibernation_end:0
+msgid "Hibernation (end)"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,hibernation_start:0
+msgid "Hibernation (start)"
+msgstr ""
+
+#. module: caving
+#: help:caving.cave,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,speleometry_how_long:0
+msgid "How long?"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,id:0
+#: field:caving.cave,id:0
+#: field:caving.cave.address,id:0
+#: field:caving.cave.filling,id:0
+#: field:caving.cave.gas_analysis,id:0
+#: field:caving.cave.lithostratigraphy,id:0
+#: field:caving.cave.reference,id:0
+#: field:caving.fauna,id:0
+#: field:caving.flora,id:0
+#: field:caving.gas,id:0
+#: field:caving.geologic_time,id:0
+#: field:caving.link,id:0
+#: field:caving.petrography,id:0
+msgid "ID"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.reference,identification:0
+#: field:caving.link,identification:0
+msgid "Identification"
+msgstr ""
+
+#. module: caving
+#: help:caving.cave,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: caving
+#: selection:caving.link,type:0
+msgid "Images"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,condition:0
+msgid "Inactive"
+msgstr ""
+
+#. module: caving
+#: selection:caving.fauna,type:0
+msgid "Invertebrates"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,is_archaeological_site:0
+msgid "Is an archaeological site?"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,is_dangerous:0
+#: field:caving.flora,is_dangerous:0
+msgid "Is dangerous?"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,is_endangered:0
+#: field:caving.flora,is_endangered:0
+msgid "Is endangered?"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,is_equipped:0
+msgid "Is equipped?"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,is_protected:0
+#: field:caving.flora,is_protected:0
+msgid "Is protected?"
+msgstr ""
+
+#. module: caving
+#: field:caving.gas,is_toxic:0
+msgid "Is toxic?"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,kind:0
+msgid "Kind"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,landlord:0
+msgid "Landlord"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,write_uid:0
+#: field:caving.cave,write_uid:0
+#: field:caving.cave.address,write_uid:0
+#: field:caving.cave.filling,write_uid:0
+#: field:caving.cave.gas_analysis,write_uid:0
+#: field:caving.cave.lithostratigraphy,write_uid:0
+#: field:caving.cave.reference,write_uid:0
+#: field:caving.fauna,write_uid:0
+#: field:caving.flora,write_uid:0
+#: field:caving.gas,write_uid:0
+#: field:caving.geologic_time,write_uid:0
+#: field:caving.link,write_uid:0
+#: field:caving.petrography,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,write_date:0
+#: field:caving.cave,write_date:0
+#: field:caving.cave.address,write_date:0
+#: field:caving.cave.filling,write_date:0
+#: field:caving.cave.gas_analysis,write_date:0
+#: field:caving.cave.lithostratigraphy,write_date:0
+#: field:caving.cave.reference,write_date:0
+#: field:caving.fauna,write_date:0
+#: field:caving.flora,write_date:0
+#: field:caving.gas,write_date:0
+#: field:caving.geologic_time,write_date:0
+#: field:caving.link,write_date:0
+#: field:caving.petrography,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: caving
+#: view:caving.link:caving.view_caving_link_form
+msgid "Link"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave,link_ids:0
+#: view:caving.link:caving.view_caving_link_tree
+#: model:ir.actions.act_window,name:caving.action_caving_link
+#: model:ir.ui.menu,name:caving.menu_caving_link
+msgid "Links"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave,lithostratigraphy_ids:0
+msgid "Lithostratigraphy"
+msgstr ""
+
+#. module: caving
+#: selection:caving.fauna,type:0
+msgid "Mammals"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,kind:0
+msgid "Man made"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+msgid "Mark as being explored"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,image_medium:0
+#: field:caving.flora,image_medium:0
+msgid "Medium-sized photo"
+msgstr ""
+
+#. module: caving
+#: help:caving.fauna,image_medium:0
+#: help:caving.flora,image_medium:0
+msgid "Medium-sized photo of the animal. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: caving
+#: help:caving.cave,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.gas_analysis,method:0
+msgid "Method"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,name:0
+#: field:caving.cave,name:0
+#: field:caving.cave.address,name:0
+#: field:caving.cave.reference,name:0
+#: field:caving.gas,name:0
+#: field:caving.geologic_time,name:0
+#: field:caving.link,name:0
+#: field:caving.petrography,name:0
+msgid "Name"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,kind:0
+msgid "Natural"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,needs_authorization:0
+msgid "Needs authorization?"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,notes:0
+#: field:caving.cave,speleometry_notes:0
+#: field:caving.cave.address,note:0
+#: field:caving.cave.gas_analysis,notes:0
+#: field:caving.cave.lithostratigraphy,notes:0
+#: field:caving.cave.reference,notes:0
+#: field:caving.fauna,notes:0
+#: field:caving.flora,notes:0
+#: field:caving.gas,notes:0
+#: field:caving.link,notes:0
+msgid "Notes"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: selection:caving.link,type:0
+msgid "Other"
+msgstr ""
+
+#. module: caving
+#: model:ir.ui.menu,name:caving.menu_caving_others
+msgid "Others"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,partner_id:0
+#: field:caving.cave.gas_analysis,partner_id:0
+#: field:caving.cave.reference,partner_id:0
+#: field:caving.link,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: caving
+#: field:caving.link,password:0
+msgid "Password"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.lithostratigraphy,petrography_id:0
+msgid "Petrography"
+msgstr ""
+
+#. module: caving
+#: view:caving.fauna:caving.view_caving_fauna_form
+#: field:caving.fauna,image:0
+#: view:caving.flora:caving.view_caving_flora_form
+#: field:caving.flora,image:0
+msgid "Photo"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,place:0
+#: field:caving.cave.address,place:0
+msgid "Place"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,visibility:0
+msgid "Public"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: view:caving.cave.reference:caving.view_caving_cave_reference_form
+msgid "Reference"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,reference_ids:0
+#: view:caving.cave.reference:caving.view_caving_cave_reference_tree
+#: model:ir.actions.act_window,name:caving.action_caving_cave_reference
+#: model:ir.ui.menu,name:caving.menu_caving_cave_reference
+msgid "References"
+msgstr ""
+
+#. module: caving
+#: selection:caving.fauna,type:0
+msgid "Reptiles"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,visibility:0
+msgid "Restrict"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_filter
+msgid "Search caves"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,visibility:0
+msgid "Secret"
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,condition:0
+msgid "Semi-active"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave.address,sequence:0
+#: field:caving.cave.reference,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,image_small:0
+#: field:caving.flora,image_small:0
+msgid "Smal-sized photo"
+msgstr ""
+
+#. module: caving
+#: help:caving.fauna,image_small:0
+#: help:caving.flora,image_small:0
+msgid "Small-sized photo of the animal. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,name:0
+#: field:caving.flora,name:0
+msgid "Species"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+msgid "Speleometry"
+msgstr ""
+
+#. module: caving
+#: field:caving.area,state_id:0
+#: view:caving.cave:caving.view_caving_cave_filter
+#: field:caving.cave,state:0
+msgid "State"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,supervisor:0
+msgid "Supervisor"
+msgstr ""
+
+#. module: caving
+#: field:caving.gas,symbol:0
+msgid "Symbol"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+msgid "Technical"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_form
+#: field:caving.cave,tectonics:0
+msgid "Tectonics"
+msgstr ""
+
+#. module: caving
+#: help:caving.fauna,image:0
+#: help:caving.flora,image:0
+msgid "This field holds the image used as photo for the animal, limited to 1024x1024px."
+msgstr ""
+
+#. module: caving
+#: selection:caving.cave,state:0
+msgid "To explore"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,is_touristic:0
+msgid "Tourist site?"
+msgstr ""
+
+#. module: caving
+#: selection:caving.fauna,category:0
+msgid "Troglobite"
+msgstr ""
+
+#. module: caving
+#: selection:caving.fauna,category:0
+msgid "Troglophile"
+msgstr ""
+
+#. module: caving
+#: selection:caving.fauna,category:0
+msgid "Trogloxene"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,type:0
+#: field:caving.link,type:0
+msgid "Type"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,url:0
+#: field:caving.cave.reference,url:0
+#: field:caving.link,url:0
+msgid "URL"
+msgstr ""
+
+#. module: caving
+#: field:caving.cave,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: caving
+#: help:caving.cave,visibility:0
+msgid "Use this field in conjunction with user groups and rules"
+msgstr ""
+
+#. module: caving
+#: field:caving.link,username:0
+msgid "Username"
+msgstr ""
+
+#. module: caving
+#: selection:caving.link,type:0
+msgid "Videos"
+msgstr ""
+
+#. module: caving
+#: view:caving.cave:caving.view_caving_cave_filter
+#: field:caving.cave,visibility:0
+msgid "Visibility"
+msgstr ""
+
+#. module: caving
+#: selection:caving.link,type:0
+msgid "Website"
+msgstr ""
+
+#. module: caving
+#: field:caving.fauna,has_image:0
+#: field:caving.flora,has_image:0
+msgid "unknown"
+msgstr ""
+
+#. module: caving
+#: help:caving.cave,reference_ids:0
+msgid "The same cave may have different references, depending on caving clubs, authorities, etc.\n"
+"Use this field to keep track of them all, starting by your own."
+msgstr ""

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_caving_link_form">
+            <field name="name">Links</field>
+            <field name="model">caving.link</field>
+            <field name="arch" type="xml">
+                <form string="Link">
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="name"/>
+                            <field name="identification"/>
+                            <field name="type"/>
+                        </group>
+                        <group>
+                            <field name="url" widget="url"/>
+                            <field name="username"/>
+                            <field name="password"/>
+                        </group>
+                    </group>
+                    <newline/>
+                    <group>
+                        <group colspan="4">
+                            <field name="notes"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="cave_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_caving_link_tree">
+            <field name="name">Links</field>
+            <field name="model">caving.link</field>
+            <field name="arch" type="xml">
+                <tree string="Links">
+                    <field name="partner_id"/>
+                    <field name="name"/>
+                    <field name="identification"/>
+                    <field name="type"/>
+                    <field name="url" widget="url"/>
+                </tree>
+            </field>
+        </record>
+
+		<record id="action_caving_link" model="ir.actions.act_window">
+			<field name="name">Links</field>
+			<field name="res_model">caving.link</field>
+ 			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+
+
+    </data>
+</openerp>

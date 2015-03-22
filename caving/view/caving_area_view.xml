@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_caving_area_form">
+            <field name="name">Areas</field>
+            <field name="model">caving.area</field>
+            <field name="arch" type="xml">
+                <form string="Area">
+                    <group colspan="4">
+                        <group>
+                            <field name="name"/>
+                            <field name="country_id"/>
+                            <field name="partner_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="cave_ids">
+                                <tree>
+                                    <field name="cave_id"/>
+                                    <field name="name"/>
+                                    <field name="country_id"/>
+                                    <field name="place"/>
+                                    <field name="coords_id" domain="['|',('country_id','=',country_id),('country_id','=',False)]"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_caving_area_tree">
+            <field name="name">Areas</field>
+            <field name="model">caving.area</field>
+            <field name="arch" type="xml">
+                <tree string="Areas">
+                    <field name="name"/>
+                    <field name="country_id"/>
+                    <field name="partner_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_caving_area" model="ir.actions.act_window">
+			<field name="name">Areas</field>
+			<field name="res_model">caving.area</field>
+ 			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+    </data>
+</openerp>

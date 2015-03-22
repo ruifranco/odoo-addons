@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_caving_fauna_form">
+            <field name="name">Fauna</field>
+            <field name="model">caving.fauna</field>
+            <field name="arch" type="xml">
+                <form string="Fauna">
+                    <h1>
+                        <field name="name" default_focus="1" placeholder="Name" />
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="image_medium" widget='image' string="Photo"/>
+                        </group>
+                        <group>
+                            <field name="aka"/>
+                            <field name="type"/>
+							<field name="category"/>
+                            <field name="is_dangerous"/>
+                            <field name="is_endangered"/>
+                            <field name="is_protected"/>
+                            <field name="hibernation_start"/>
+                            <field name="hibernation_end"/>
+                        </group>
+                    </group>
+                    <group colspan="4">
+                        <field name="notes"/>
+                    </group>
+                    <group>
+                        <field name="cave_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_caving_fauna_tree">
+            <field name="name">Fauna</field>
+            <field name="model">caving.fauna</field>
+            <field name="arch" type="xml">
+                <tree string="Fauna">
+                    <field name="name"/>
+                    <field name="aka"/>
+                    <field name="type"/>
+					<field name="category"/>
+                    <field name="is_dangerous"/>
+                    <field name="is_endangered"/>
+                    <field name="is_protected"/>
+                    <field name="hibernation_start"/>
+                    <field name="hibernation_end"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="kanban_view_caving_fauna">
+            <field name="name">Fauna</field>
+            <field name="model">caving.fauna</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_caving_vignette">
+                                <div class="oe_caving_image">
+                                    <a type="open"><img t-att-src="kanban_image('caving.fauna', 'image_medium', record.id.value)" class="oe_caving_picture"/></a>
+                                </div>
+                                <div class="oe_caving_details">
+                                    <h4>
+                                        <a type="open"><field name="name"/></a>
+                                    </h4>
+                                </div>
+                            </div>
+                            <script>
+                                $('.oe_caving_picture').load(function() { if($(this).width() > $(this).height()) { $(this).addClass('oe_caving_picture_wide') } });
+                            </script>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="action_caving_fauna" model="ir.actions.act_window">
+			<field name="name">Fauna</field>
+			<field name="res_model">caving.fauna</field>
+ 			<field name="view_type">form</field>
+			<field name="view_mode">kanban,tree,form</field>
+		</record>
+
+
+    </data>
+</openerp>

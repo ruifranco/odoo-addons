@@ -32,7 +32,9 @@
                         - coords are saved in the decimal degrees format
                         - users can choose wich coordinate format to use throughout Odoo
                         
-                        PS: map widget is based on Dorin Hongu's web_gmaps module
+                        PS: 
+                        - map widget is based on Dorin Hongu's web_gmaps module
+                        - JavaScript had an invaluable help from Dinil UD
                         """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',

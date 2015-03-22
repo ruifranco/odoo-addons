@@ -1,0 +1,14 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"caving_cave","caving_cave","model_caving_cave",,1,1,1,1
+"caving_area","caving_area","model_caving_area",,1,1,1,1
+"caving_cave_address","caving_cave_address","model_caving_cave_address",,1,1,1,1
+"caving_cave_reference","caving_cave_reference","model_caving_cave_reference",,1,1,1,1
+"caving_cave_lithostratigraphy","caving_cave_lithostratigraphy","model_caving_cave_lithostratigraphy",,1,1,1,1
+"caving_cave_filling","caving_cave_filling","model_caving_cave_filling",,1,1,1,1
+"caving_cave_gas_analysis","caving_cave_gas_analysis","model_caving_cave_gas_analysis",,1,1,1,1
+"caving_fauna","caving_fauna","model_caving_fauna",,1,1,1,1
+"caving_flora","caving_flora","model_caving_flora",,1,1,1,1
+"caving_gas","caving_gas","model_caving_gas",,1,1,1,1
+"caving_geologic_time","caving_geologic_time","model_caving_geologic_time",,1,1,1,1
+"caving_link","caving_link","model_caving_link",,1,1,1,1
+"caving_petrography","caving_petrography","model_caving_petrography",,1,1,1,1

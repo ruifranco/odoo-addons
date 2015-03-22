@@ -1,0 +1,136 @@
+@charset "utf-8";
+/*
+.openerp .oe_view_manager table.oe_view_manager_header {
+  border-collapse: separate;
+  width: 100%;
+  table-layout: fixed;
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-color:white;
+    background-position: top center;
+}
+*/
+
+
+
+/*
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_header_row {
+  clear: both;
+  text-shadow: 0 1px 1px white;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_header_row:last-child td {
+  padding-top: 0;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_header_row:first-child td {
+  padding-top: 8px;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_view_manager_sidebar {
+  margin: 0px auto;
+  text-align: center;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header td {
+  line-height: 26px;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header h2 {
+  font-size: 18px;
+  margin: 0;
+  float: left;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header h2 a {
+  color: #7c7bad;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_dropdown_menu {
+  line-height: normal;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group {
+  display: inline-block;
+  border: 1px solid #ababab;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group li {
+  float: left;
+  border-right: 1px solid #ababab;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group li:last-child {
+  border: none;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group a {
+  color: #4c4c4c;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group a:hover {
+  text-decoration: none;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group .active {
+  background: #999999;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group .active a {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.openerp .oe_view_manager table.oe_view_manager_header .oe_view_manager_buttons {
+  white-space: nowrap;
+}
+.openerp .oe_view_manager_current > .oe_view_manager_header {
+  border-bottom: 1px solid #cacaca;
+  background-color: #ededed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#dedede));
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -moz-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -o-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: linear-gradient(to bottom, #fcfcfc, #dedede);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 9px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 9px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 9px rgba(0, 0, 0, 0.1);
+}
+.openerp .oe_view_manager_current > .oe_view_manager_header .oe_header_row td {
+  padding: 8px;
+}
+.openerp .oe_view_manager_current > .oe_view_manager_header .oe_header_row:first-child td {
+  padding-top: 8px;
+}
+.openerp .oe_view_manager_inline > .oe_view_manager_header, .openerp .oe_view_manager_inlineview > .oe_view_manager_header {
+  display: none;
+}
+.openerp .oe_form_field_one2many > .oe_view_manager .oe_view_manager_header2 td, .openerp .oe_form_field_many2many > .oe_view_manager .oe_view_manager_header2 td {
+  padding: 0px 8px;
+  line-height: 16px;
+}
+.openerp .oe_form_field_one2many > .oe_view_manager .oe_view_manager_header2 td .oe_i, .openerp .oe_form_field_many2many > .oe_view_manager .oe_view_manager_header2 td .oe_i {
+  font-size: 13px;
+}
+.openerp .oe_form_field_one2many > .oe_view_manager .oe_view_manager_header2 td .oe_pager_group, .openerp .oe_form_field_many2many > .oe_view_manager .oe_view_manager_header2 td .oe_pager_group {
+  height: auto;
+  line-height: 16px;
+}
+.openerp .oe_form_field_one2many > .oe_view_manager .oe_view_manager_header2 td .oe_pager_group li, .openerp .oe_form_field_many2many > .oe_view_manager .oe_view_manager_header2 td .oe_pager_group li {
+  height: auto;
+  line-height: 16px;
+}
+
+.openerp .oe_view_manager_current > .oe_view_manager_header {
+    border: 0px !important;
+    box-shadow: 0px 0px 0px;
+}
+*/

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+		<!-- caves -->
+
+        <record model="ir.ui.view" id="view_caving_cave_form">
+            <field name="name">Caves</field>
+            <field name="model">caving.cave</field>
+            <field name="arch" type="xml">
+                <form string="Cave" version="7.0">
+                    <header groups="base.group_user">
+                        <button name="action_button_exploration" states="draft" string="Mark as being explored" class="oe_highlight" type="object" groups="base.group_user"/>
+                        <button name="action_button_done" states="exploration" string="Explored" class="oe_highlight" type="object" groups="base.group_user"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,exploration,done" statusbar_colors='{"exception":"red","cancel":"red"}'/>
+                    </header>
+                    
+                    <group colspan="4">
+                        <group>
+                            <field name="name"/>
+                            <field name="aka"/>
+                            <field name="url" widget="url" states="exploration,done"/>
+                        </group>
+                        <group>
+                            <field name="condition" states="exploration,done"/>
+                            <field name="kind"/>
+                            <field name="visibility"/>
+                        </group>
+                    </group>
+
+                    <group colspan="4">
+                        <field name="reference_ids" colspan="4" context="{'cave_form':True}">
+                            <form string="Reference">
+                                <group>
+                                    <group colspan="4">       
+                                        <field name="partner_id"/>
+                                        <field name="name"/>
+                                        <field name="identification"/>
+                                        <field name="url" widget="url"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <group colspan="4">
+                                        <field name="notes"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+
+                    <notebook>
+                        <page string="Address">
+                            <field name="address_ids">
+                                <form>
+                                    <group>
+	                                    <group>
+	                                        <field name="sequence" widget="handle"/>
+	                                        <field name="name"/>
+	                                        <field name="country_id"/>
+	                                        <field name="area_id" domain="[('country_id','=',country_id)]"/>
+	                                        <field name="place"/>
+	                                        <field name="coords_id" domain="['|',('country_id','=',country_id),('country_id','=',False)]"/>
+                                            <field name="note"/>
+	                                    </group>
+	                                    <group>
+	                                        <widget type="gps_base_gmap_marker" coords="coords_id"/>
+	                                    </group>
+                                    </group>
+                                </form>
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="country_id"/>
+                                    <field name="area_id" domain="[('country_id','=',country_id)]"/>
+                                    <field name="place"/>
+                                    <field name="coords_id" domain="['|',('country_id','=',country_id),('country_id','=',False)]"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Tectonics" states="exploration,done">
+                            <group>
+                                <group>
+                                    <field name="tectonics" colspan="4" nolabel="1"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Gas analysis" states="exploration,done">
+                            <group>
+                                <group>
+                                    <field name="gas_analysis_ids" colspan="4" nolabel="1" context="{'cave_form':True}">
+                                        <form string="Gas analysis">
+                                            <group>
+                                                <field name="gas_id" widget="selection"/>
+                                                <field name="partner_id"/>
+                                                <field name="date"/>
+                                                <field name="method"/>
+                                                <field name="percentage"/>
+                                            </group>
+                                            <group>
+                                                <field name="notes"/>
+                                            </group>
+                                        </form>
+                                    </field>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Lithostratigraphy" states="exploration,done">
+                            <group>
+                                <group>
+                                    <field name="lithostratigraphy_ids" colspan="4" nolabel="1" context="{'cave_form':True}">
+                                        <form string="Lithostratigraphy">
+                                            <group>
+	                                            <field name="elevation_from"/>
+	                                            <field name="elevation_to"/>
+	                                            <field name="petrography_id"/>
+	                                            <field name="geologic_time_id" widget="selection"/>
+	                                            <field name="notes" colspan="4"/>
+                                            </group>
+                                        </form>
+                                        <tree string="Lithostratigraphy">
+                                            <field name="elevation_from"/>
+                                            <field name="elevation_to"/>
+                                            <field name="petrography_id"/>
+                                            <field name="geologic_time_id"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Fillings" states="exploration,done">
+                            <group>
+                                <group>
+                                    <field name="filling_ids" colspan="4" nolabel="1" context="{'cave_form':True}">
+                                        <form string="Fillings">
+                                            <group>
+                                                <field name="elevation"/>
+                                                <field name="name" colspan="4"/>
+                                            </group>
+                                        </form>
+                                        <tree string="Fillings">
+                                            <field name="elevation"/>
+                                            <field name="name"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Speleometry">
+                            <group>
+                                <group>
+                                    <field name="speleometry_entrance_size_max"/>
+                                    <field name="speleometry_entrance_size_min"/>
+                                    <field name="speleometry_deepest_point"/>
+                                    <field name="speleometry_how_long"/>
+                                    <field name="access_vertical"/>
+                                    <field name="access_horizontal"/>
+                                </group>
+                                <group>
+                                    <field name="speleometry_notes"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Technical">
+                            <group>
+                                <group>
+                                    <field name="is_equipped" states="exploration,done"/>
+                                    <field name="has_public_access" states="exploration,done"/>
+                                    <field name="needs_authorization"/>
+                                </group>
+                                <group>
+                                    <field name="is_touristic" states="exploration,done"/>
+                                    <field name="has_animal_remains" states="exploration,done"/>
+                                    <field name="is_archaeological_site" states="exploration,done"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Fauna" states="exploration,done">
+                            <field name="fauna_ids" nolabel="1"/>           
+                        </page>
+                        <page string="Flora" states="exploration,done">
+                        	<field name="flora_ids" nolabel="1"/>
+                        </page>
+                        <page string="Links">
+                            <field name="link_ids" nolabel="1"/>
+                        </page>
+                        <page string="Other">
+                            <group>
+                                <group>
+                                    <field name="landlord"/>
+                                    <field name="supervisor"/>
+                                </group>
+                                <group>
+                                    <field name="notes"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="view_caving_cave_tree">
+            <field name="name">Caves</field>
+            <field name="model">caving.cave</field>
+            <field name="arch" type="xml">
+                <tree string="Caves">
+                    <field name="name"/>
+                    <field name="visibility"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_caving_cave" model="ir.actions.act_window">
+            <field name="name">Caves</field>
+            <field name="res_model">caving.cave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_caving_cave_filter" model="ir.ui.view">
+            <field name="name">view_caving_cave_filter</field>
+            <field name="model">caving.cave</field>
+            <field name="arch" type="xml">
+                <search string="Search caves">
+                    <field name="name"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Condition" domain="[]" icon="terp-go-home" context="{'group_by':'condition'}"/>
+                        <filter string="Visibility" domain="[]" icon="terp-go-home" context="{'group_by':'visibility'}"/>
+                        <filter string="State" domain="[]" icon="terp-go-home" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</openerp>
