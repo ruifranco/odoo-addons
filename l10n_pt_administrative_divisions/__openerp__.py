@@ -22,21 +22,19 @@
 ##############################################################################
 {
     'name'          : 'Portugal - administrative divisions',
-	'version'       : '1.0',
+	'version'       : '1.1',
 	'category'      : 'Localization',
     'summary'       : 'Geographic/administrative details',
 	'description'   : """
-	                    Adiciona os campos para 'Distrito', 'Concelho' e 'Freguesia'
-                        Adds fields for address in res.partner: distrito, concelho, freguesia\n\n
-                                                
-                        
-                        """,
+Adiciona os campos para 'Distrito', 'Concelho' e 'Freguesia'.\n\n
+Adds fields for address in res.partner: distrito, concelho, freguesia\n\n
+""",
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
 	'data'          : [
-                        'data/l10n_pt_administrative_divisions_distritos_data.xml',
-                        'data/l10n_pt_administrative_divisions_concelhos_data.xml',
-                        'data/l10n_pt_administrative_divisions_freguesias_data.xml',
+                        'data/l10n_pt_administrative_divisions.distritos.csv',
+                        'data/l10n_pt_administrative_divisions.concelhos.csv',
+                        'data/l10n_pt_administrative_divisions.freguesias.csv',
 
                         'security/ir.model.access.csv',
                         

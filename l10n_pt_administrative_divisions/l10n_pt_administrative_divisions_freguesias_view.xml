@@ -12,6 +12,7 @@
                             <field name="distrito_id"/>
                             <field name="concelho_id"/>
                             <field name="name"/>
+                            <field name="note"/>
                             <field name="active"/>
                         </group>
                     </group>

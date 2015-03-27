@@ -71,6 +71,7 @@ class l10n_pt_administrative_divisions_freguesias(orm.Model):
         'distrito_id'   : fields.related('concelho_id', 'distrito_id', type='many2one', relation='l10n_pt_administrative_divisions.distritos', string='Distrito', store=True, readonly=True),
         'concelho_id'   : fields.many2one('l10n_pt_administrative_divisions.concelhos','Concelho', required=True),
         'name'          : fields.char('Name', size=64, required=True),
+        'note'          : fields.text('Note'),
         'active'        : fields.boolean('Active'),
     }
     
