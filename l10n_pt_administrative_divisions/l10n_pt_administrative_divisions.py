@@ -30,6 +30,7 @@ from openerp.tools.translate import _
 
 class l10n_pt_administrative_divisions_distritos(orm.Model):
     _name ='l10n_pt_administrative_divisions.distritos'
+    _order='name'
 
     _columns = {
         'country_id': fields.many2one('res.country','Country', required=True),
@@ -47,6 +48,7 @@ class l10n_pt_administrative_divisions_distritos(orm.Model):
 
 class l10n_pt_administrative_divisions_concelhos(orm.Model):
     _name ='l10n_pt_administrative_divisions.concelhos'
+    _order='name'
 
     _columns = {
         'country_id'    : fields.related('distrito_id', 'country_id', type='many2one', relation='res.country', string='Country', store=True, readonly=True),
@@ -65,6 +67,7 @@ class l10n_pt_administrative_divisions_concelhos(orm.Model):
 
 class l10n_pt_administrative_divisions_freguesias(orm.Model):
     _name ='l10n_pt_administrative_divisions.freguesias'
+    _order='name'
 
     _columns = {
         'country_id'    : fields.related('distrito_id', 'country_id', type='many2one', relation='res.country', string='Country', store=True, readonly=True),

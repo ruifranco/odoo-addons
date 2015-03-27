@@ -22,7 +22,7 @@
 ##############################################################################
 {
     'name'          : 'Portugal - administrative divisions',
-	'version'       : '1.1',
+	'version'       : '1.2',
 	'category'      : 'Localization',
     'summary'       : 'Geographic/administrative details',
 	'description'   : """
