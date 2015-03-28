@@ -24,7 +24,7 @@
     'name'          : 'Address - extended',
 	'version'       : '1.2',
 	'category'      : 'Localization',
-    'summary'       : 'Extra fields to save ore info on addresses',
+    'summary'       : 'Extra fields to save more info on addresses',
 	'description'   : """
 Adds three hierarchically dependent fields so that more info can be saved on addresses (typically, region, county, etc.).
 """,
