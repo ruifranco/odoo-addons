@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_address_extended_filter" model="ir.ui.view">
+            <field name="name">view_address_extended_filter</field>
+            <field name="model">address_extended.places</field>
+            <field name="arch" type="xml">
+                <search string="Search places">
+                    <field name="name"/>
+                    <field name="country_id"/>
+                    <field name="state_id"/>
+                    <field name="parent_id"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Country" domain="[]" icon="terp-go-home" context="{'group_by':'country_id'}"/>
+                        <filter string="State" domain="[]" icon="terp-go-home" context="{'group_by':'state_id'}"/>
+                        <filter string="Parent" domain="[]" icon="terp-go-home" context="{'group_by':'parent_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="view_address_extended_form">
+            <field name="name">Places</field>
+            <field name="model">address_extended.places</field>
+            <field name="arch" type="xml">
+                <form string="Places">
+                    <group>
+                        <group>
+                            <field name="country_id" attrs="{'readonly':[('parent_id','!=',False)]}"/>
+                            <field name="state_id" domain="[('country_id','=',country_id)]" attrs="{'invisible':[('parent_id','!=',False)]}"/>
+                            <field name="parent_id"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_address_extended_tree">
+            <field name="name">Places</field>
+            <field name="model">address_extended.places</field>
+            <field name="arch" type="xml">
+                <tree string="Places">
+                    <field name="country_id"/>
+                    <field name="state_id"/>
+                    <field name="parent_id"/>
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="action_address_extended_places" model="ir.actions.act_window">
+            <field name="name">Places</field>
+            <field name="res_model">address_extended.places</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_address_extended_places" name="Places" parent="base.menu_localisation" action="action_address_extended_places"/>
+       
+    </data>
+</openerp>

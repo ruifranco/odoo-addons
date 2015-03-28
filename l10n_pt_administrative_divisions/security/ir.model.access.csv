@@ -1,8 +1,0 @@
-"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_distritos1","l10n_pt_administrative_divisions.distritos","model_l10n_pt_administrative_divisions_distritos",,1,0,0,0
-"access_distritos2","l10n_pt_administrative_divisions.distritos","model_l10n_pt_administrative_divisions_distritos",base.group_system,1,1,1,1
-"access_concelhos1","l10n_pt_administrative_divisions.concelhos","model_l10n_pt_administrative_divisions_concelhos",,1,0,0,0
-"access_concelhos2","l10n_pt_administrative_divisions.concelhos","model_l10n_pt_administrative_divisions_concelhos",base.group_system,1,1,1,1
-"access_freguesias1","l10n_pt_administrative_divisions.freguesias","model_l10n_pt_administrative_divisions_freguesias",,1,0,0,0
-"access_freguesias2","l10n_pt_administrative_divisions.freguesias","model_l10n_pt_administrative_divisions_freguesias",base.group_system,1,1,1,1
-

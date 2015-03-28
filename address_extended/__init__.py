@@ -20,19 +20,5 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    'name'          : 'Portugal - administrative divisions',
-	'version'       : '2.0',
-	'category'      : 'Localization',
-    'summary'       : 'Geographic/administrative details',
-	'description'   : """
-Preenche a informação relativa a 'Distrito', 'Concelho' e 'Freguesia'.\n\n
-Loads info concerning 'Distrito', 'Concelho', 'Freguesia'\n\n
-""",
-	'author'        : 'Rui Pedrosa Franco',
-    'depends'       : ['address_extended'],
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
-	'data'          : ['data/address_extended.places.csv',],
-    'installable'   : True,
-    'active'        : False,
-}
+
+import address_extended

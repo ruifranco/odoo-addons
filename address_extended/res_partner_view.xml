@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="address_extended_view_res_partner_filter" model="ir.ui.view">
+            <field name="name">address_extended_view_res_partner_filter</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="place_id_1"/>
+                    <field name="place_id_2"/>
+                    <field name="place_id_3"/>
+                </xpath> 
+
+                <xpath expr="//filter[@string='Country']" position="after">
+                    <filter string="Place 1" context="{'group_by': 'place_id_1'}"/>
+                    <filter string="Place 2" context="{'group_by': 'place_id_2'}"/>
+                    <filter string="Place 3" context="{'group_by': 'place_id_3'}"/>
+                </xpath>
+            </field>
+        </record>
+                
+                
+        <record id="address_extended_view_partner_form" model="ir.ui.view">
+            <field name="name">address_extended_view_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <field name="state_id" position="replace">
+                    <field name="state_id" class="oe_no_button" placeholder="State" 
+                        style="width: 37%%" options='{"no_open": True}' 
+                        on_change="onchange_state(state_id)" attrs="{'readonly': [('use_parent_address','=',True)]}"/>
+                </field>
+                <field name="country_id" position="after">
+                    <field name="place_id_1" class="oe_no_button" placeholder="Place 1" domain="['&amp;',('parent_id','=',False),'|',('country_id','=',country_id),'&amp;',('state_id','=',state_id),('state_id','!=',False)]" attrs="{'readonly': [('country_id','=',False)]}"/>                
+                    <field name="place_id_2" class="oe_no_button" placeholder="Place 2" domain="[('parent_id','=',place_id_1)]" attrs="{'readonly': [('place_id_1','=',False)]}"/>
+                    <field name="place_id_3" class="oe_no_button" placeholder="Place 3" domain="[('parent_id','=',place_id_2)]" attrs="{'readonly': [('place_id_2','=',False)]}"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

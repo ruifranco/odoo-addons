@@ -21,18 +21,20 @@
 #
 ##############################################################################
 {
-    'name'          : 'Portugal - administrative divisions',
-	'version'       : '2.0',
+    'name'          : 'Address - extended',
+	'version'       : '1.2',
 	'category'      : 'Localization',
-    'summary'       : 'Geographic/administrative details',
+    'summary'       : 'Extra fields to save ore info on addresses',
 	'description'   : """
-Preenche a informação relativa a 'Distrito', 'Concelho' e 'Freguesia'.\n\n
-Loads info concerning 'Distrito', 'Concelho', 'Freguesia'\n\n
+Adds three hierarchically dependent fields so that more info can be saved on addresses (typically, region, county, etc.).
 """,
 	'author'        : 'Rui Pedrosa Franco',
-    'depends'       : ['address_extended'],
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
-	'data'          : ['data/address_extended.places.csv',],
+	'data'          : [
+                        'security/ir.model.access.csv',
+                        'address_extended_view.xml',
+                        'res_partner_view.xml',
+                        ],
     'installable'   : True,
     'active'        : False,
 }
