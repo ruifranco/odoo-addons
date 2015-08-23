@@ -1,0 +1,61 @@
+<openerp>
+    <data>
+
+        <record id="hr_holidays_publish_view_employee_form" model="ir.ui.view">
+            <field name="name">hr_holidays_publish_view_employee_form</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="model">hr.employee</field>
+            <field name="arch" type="xml">
+                <xpath expr="//page[last()]" position="after">
+                    <page string="Personal settings">
+                        <group>
+                            <group string="Leaves publishing">
+                                <help>Allow your workmates to see your leaves. If the "Leave Type" field is set to blank, all leave types will be available to the target audience.</help>
+                                <field name="holidays_publish_ids" context="{'employee_id':active_id}" nolabel="1" colspan="4">
+                                    <tree editable="top">
+                                        <field name="status_id" widget="selection"/>
+                                        <field name="visibility" attrs="{'required':[('workmate_id','=',False)]}"/>
+                                        <field name="workmate_id" domain="[('id','!=',context.get('employee_id',False))]" attrs="{'required':[('visibility','=',False)]}"/>
+                                        <field name="user_id" invisible="1"/>
+                                        <field name="approved_only"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+
+        <record model="ir.ui.view" id="view_hr_holidays_publish_tree">
+            <field name="name">view_hr_holidays_publish_tree</field>
+            <field name="model">hr.holidays.publish</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="employee_id" domain="[('user_id','!=',False),('user_id','=',uid)]" widget="selection"/>
+                    <field name="status_id" widget="selection"/>
+                    <field name="visibility" attrs="{'required':[('workmate_id','=',False)]}"/>
+                    <field name="workmate_id" domain="[('id','!=',context.get('employee_id',False))]" attrs="{'required':[('visibility','=',False)]}"/>
+                    <field name="user_id" invisible="1"/>
+                    <field name="approved_only"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_hr_holidays_publish">
+            <field name="name">Settings (publish)</field>
+            <field name="res_model">hr.holidays.publish</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_id','!=',False),('user_id','=',uid)]</field>
+            <field name="help">Allow your workmates to see your leaves. If the "Leave Type" field is set to blank, all leave types will be available to the target audience.</field>
+        </record>
+
+        <menuitem id="menu_hr_holidays_publish" name="Settings (publish)" parent="hr_holidays.menu_open_ask_holidays" action="action_hr_holidays_publish" sequence="50"/>
+
+        
+        
+    </data>
+</openerp>

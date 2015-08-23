@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_holidays_publish
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-ee69792\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-23 15:37+0000\n"
+"PO-Revision-Date: 2015-08-23 15:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_holidays_publish
+#: view:hr.employee:hr_holidays_publish.hr_holidays_publish_view_employee_form
+#: model:ir.actions.act_window,help:hr_holidays_publish.action_hr_holidays_publish
+msgid "Allow your workmates to see your leaves. If the \"Leave Type\" field is set to blank, all leave types will be available to the target audience."
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,employee_id:0
+#: model:ir.model,name:hr_holidays_publish.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: selection:hr.holidays.publish,visibility:0
+msgid "Everyone"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: model:ir.model,name:hr_holidays_publish.model_hr_holidays_publish
+msgid "Holidays publish"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,id:0
+msgid "ID"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,status_id:0
+msgid "Leave Type"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.employee,holidays_publish_ids:0
+msgid "Leaves"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: view:hr.employee:hr_holidays_publish.hr_holidays_publish_view_employee_form
+msgid "Leaves publishing"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,approved_only:0
+msgid "Only publish approved leaves?"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: view:hr.employee:hr_holidays_publish.hr_holidays_publish_view_employee_form
+msgid "Personal settings"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:res.users,publish_leaves_users:0
+msgid "Publish leaves users"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: selection:hr.holidays.publish,visibility:0
+msgid "Same department"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: model:ir.actions.act_window,name:hr_holidays_publish.action_hr_holidays_publish
+#: model:ir.ui.menu,name:hr_holidays_publish.menu_hr_holidays_publish
+msgid "Settings (publish)"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,workmate_user_id:0
+msgid "User"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: model:ir.model,name:hr_holidays_publish.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,visibility:0
+msgid "Visibility"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: help:hr.employee,holidays_publish_ids:0
+msgid "Who should be able to see your leaves?"
+msgstr ""
+
+#. module: hr_holidays_publish
+#: field:hr.holidays.publish,workmate_id:0
+msgid "Workmate"
+msgstr ""
+
