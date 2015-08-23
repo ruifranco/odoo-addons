@@ -27,7 +27,33 @@ from openerp import models, fields, api, _
 from openerp import tools
 
 
+class event_type(models.Model):
+    _inherit='event.type' 
 
+    equipment_host_ids = fields.Many2many('product.equipment',
+        'product_equipment_event_type_host_rel', 'equipment_id', 'event_type_id', string='Equipment list (host)')
+        
+    equipment_participants_ids = fields.Many2many('product.equipment',
+        'product_equipment_event_type_participants_rel', 'equipment_id', 'event_type_id', string='Equipment list (participants)')
+
+    equipment_host_ids_text = fields.Char('Equipment lists (host)', compute='_get_equipment_host_lists')
+    equipment_participants_ids_text = fields.Char('Equipment lists (participants)', compute='_get_equipment_participants_lists')
+    
+    @api.one
+    @api.onchange('equipment_host_ids')
+    def _get_equipment_host_lists(self):
+        aux=[]
+        for e in self.equipment_host_ids:
+            aux.append(e.name)
+        self.equipment_host_ids_text='\n'.join(aux)
+
+    @api.one
+    @api.onchange('equipment_participants_ids')
+    def _get_equipment_participants_lists(self):
+        aux=[]
+        for e in self.equipment_participants_ids:
+            aux.append(e.name)
+        self.equipment_participants_ids_text='\n'.join(aux)
 
 
 class event_event(models.Model):
@@ -85,6 +111,36 @@ class event_event(models.Model):
         self._get_equipment_text('participants')
 
 
+
+    @api.one
+    @api.onchange('type')
+    def load_event_type_lists(self):
+        if self.type:
+            eq=[]
+            for eql in self.type.equipment_host_ids:
+                for l in eql.equipment_lines:
+                    eq.append({
+                        'categ_id'  : l.categ_id.id,
+                        'qty'       : l.qty,
+                        'mandatory' : l.mandatory,
+                        'notes'     : l.notes,
+                        })
+            self.equipment_host_id=False            
+            self.equipment_host_ids=eq            
+
+            eq=[]
+            for eql in self.type.equipment_participants_ids:
+                for l in eql.equipment_lines:
+                    eq.append({
+                        'categ_id'  : l.categ_id.id,
+                        'qty'       : l.qty,
+                        'mandatory' : l.mandatory,
+                        'notes'     : l.notes,
+                        })
+            self.equipment_participants_id=False            
+            self.equipment_participants_ids=eq            
+
+
     @api.one
     def button_load_host_equipment_list(self):
         eq=[]
@@ -98,6 +154,7 @@ class event_event(models.Model):
                     })
         self.equipment_host_id=False            
         self.equipment_host_ids=eq            
+  
   
     @api.one
     def button_load_participants_equipment_list(self):
@@ -113,25 +170,8 @@ class event_event(models.Model):
         self.equipment_participants_id=False
         self.equipment_participants_ids=eq
   
-"""  
-class event_event(orm.Model):
-    _inherit='event.event' 
 
-    def on_change_type(self, cr, uid, ids, type):
-        res = {}
-        
-        raise osv.except_osv('Warning!','maria')
-        
-        if type:
-            res.setdefault('domain', {})
-        
-            equipment_res=self.pool.get('event.type').browse(cr, uid, type)
-            if equipment_res:
-                res['domain']['equipment_host_id']=[('id','in',equipment_res.equipment_ids)]
-            
-            
-        return res
-"""  
+
   
 class event_equipment_lines(models.Model):
     _name='event.equipment.lines'
@@ -257,3 +297,4 @@ class event_registration(orm.Model):
             raise osv.except_osv(_('Equipment check!'), msg + '\n\n' + _(aux))
         else:
             raise osv.except_osv(_('Equipment check!'),_('%s lacks no equipment') % _(self.partner_id.name))
+            

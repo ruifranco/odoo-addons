@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 Rui Pedrosa Franco All Rights Reserved
+#    Copyright (C) 2015 Rui Pedrosa Franco All Rights Reserved
 #    http://pt.linkedin.com/in/ruipedrosafranco
 #    $Id$
 #
@@ -22,4 +22,3 @@
 ##############################################################################
 
 import event
-import partner

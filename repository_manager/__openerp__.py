@@ -22,6 +22,7 @@
     'name'          : 'Repository manager',
 	'version'       : '2.0',
 	'category'      : 'Tools',
+<<<<<<< HEAD
 	'summary'       : 'Repository management / module deployment',
 	'description'   : """
 - creates a README file to be used in repositories to tell people what the module is all about
@@ -29,6 +30,12 @@
 
 This module assumes you have ZIP installed in your system.
 """,
+=======
+	'summary'       : 'Repository management',
+	'description'   : """In this very early stage, this module will only let you create a README file to be used in a repository manager.\n
+It uses the info on the module to create the file and saves it in the module's folder.\n
+Check the Repository tab inside any module's form.""",
+>>>>>>> master
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
 	'depends'       : ['base'],

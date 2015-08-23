@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 Rui Pedrosa Franco All Rights Reserved
+#    Copyright (C) 2015 Rui Pedrosa Franco All Rights Reserved
 #    http://pt.linkedin.com/in/ruipedrosafranco
 #    $Id$
 #
@@ -20,6 +20,16 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-import event
-import partner
+{
+    'name'          : 'Events - notes',
+	'version'       : '1.0',
+	'category'      : 'Extra Tools',
+	'summary'       : 'Adds a note field to an event',
+	'description'   : '',
+	'author'        : 'Rui Pedrosa Franco',
+	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'depends'       : ['event'],
+	'data'          : ['event_view.xml'],
+    'installable'   : True,
+    'active'        : False,
+}

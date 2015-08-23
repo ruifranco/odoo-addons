@@ -32,7 +32,7 @@
                         - Partner field is shown in the event's registration lines
                         - Equipment lists can be associated to event types
                         - Event type becomes mandatory
-                        - More fields are shown in the event type tree view
+                        - Shows equipment list in the event type tree view
                         
                         NOTE:
                         - (event.event) equipment_host_text and equipment_participants_text hold the equipment list as text
