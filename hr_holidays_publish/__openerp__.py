@@ -25,7 +25,7 @@
     'name'          : 'HR Holidays Publish',
 	'version'       : '1.0',
 	'category'      : 'Human Resources',
-	'summary'       : """Publish your leaves so that others may know about them""",
+	'summary'       : """Control who can see your leaves""",
 	'description'   : """
 By default, Odoo only allows employees to see their own leaves. This is not practical within a company as employee's holidays have to be be combined.
 By not being able to know about other's requests, employees have to go through HR in what might be a frustrating process.
