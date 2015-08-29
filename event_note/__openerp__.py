@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 Rui Pedrosa Franco All Rights Reserved
+#    Copyright (C) 2015 Rui Pedrosa Franco All Rights Reserved
 #    http://pt.linkedin.com/in/ruipedrosafranco
 #    $Id$
 #
@@ -21,28 +21,17 @@
 #
 ##############################################################################
 {
-    'name'          : 'Events - work',
+    'name'          : 'Events - notes',
 	'version'       : '1.0',
-	'category'      : 'Events',
-    'summary'       : 'Association between task work and events',
+	'category'      : 'Extra Tools',
+	'summary'       : 'Adds a note field to an event',
 	'description'   : """
-This will let you associate a project-task work line with an event so that you will know what work was done during that specific event.
-	
 MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
                         """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
-	'depends'       : [
-	                   'event',
-	                   'project',
-	                   ],
-	'data'          : [
-                       'security/event_security.xml',
-                       'security/ir.model.access.csv',
-
-	                   'event_view.xml',
-	                   'project_view.xml',
-	                   ],
+	'depends'       : ['event'],
+	'data'          : ['event_view.xml'],
     'installable'   : True,
     'active'        : False,
 }

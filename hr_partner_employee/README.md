@@ -28,15 +28,15 @@ AGPL-3
 
 [ DESCRIPTION ]
 
-                        Deals with the connection between Partners and Employees
+Deals with the connection between Partners and Employees
 
 
-                        - one can create an employee from the partner's form
+- one can create an employee from the partner's form
 
-                        - shows the 'employee' field in the partner's form (readonly)
+- shows the 'employee' field in the partner's form (readonly)
 
-                        - when an employee is created, a user is also created
-
+                        
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
                         
 
 

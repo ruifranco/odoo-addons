@@ -1,9 +1,9 @@
 [ NAME ]
-product_equipment_list
+address_extended
 
 
 [ SUMMARY ]
-Product - equipment list
+Address - extended
 
 
 [ AUTHOR ]
@@ -19,7 +19,7 @@ http://pt.linkedin.com/in/ruipedrosafranco
 
 
 [ CATEGORY ]
-Extra Tools
+Localization
 
 
 [ LICENSE ]
@@ -28,8 +28,8 @@ AGPL-3
 
 [ DESCRIPTION ]
 
-- Allows to define lists of equipment
-                        
+Adds three hierarchically dependent fields so that more info can be saved on addresses (typically, region, county, etc.).
+
 MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
                         
 

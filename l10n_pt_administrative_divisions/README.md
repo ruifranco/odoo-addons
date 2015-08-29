@@ -1,9 +1,9 @@
 [ NAME ]
-product_equipment_list
+l10n_pt_administrative_divisions
 
 
 [ SUMMARY ]
-Product - equipment list
+Portugal - administrative divisions
 
 
 [ AUTHOR ]
@@ -19,7 +19,7 @@ http://pt.linkedin.com/in/ruipedrosafranco
 
 
 [ CATEGORY ]
-Extra Tools
+Localization
 
 
 [ LICENSE ]
@@ -28,10 +28,15 @@ AGPL-3
 
 [ DESCRIPTION ]
 
-- Allows to define lists of equipment
-                        
+Preenche a informação relativa a 'Distrito', 'Concelho' e 'Freguesia'.
+
+
+Loads info concerning 'Distrito', 'Concelho', 'Freguesia'
+
+
+
 MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
-                        
+
 
 
 [ MENUS ]

@@ -28,22 +28,24 @@ AGPL-3
 
 [ DESCRIPTION ]
 
-                        Enforces domains and filters according to chosen company in a multicompany environment.
+Enforces domains and filters according to chosen company in a multicompany environment.
     
-                        
+
 Field domains applied in:
-                        - Sales receipts
-                        - Customer payments
-                        - Purchase receipts
-                        - Supplier payments
+- Sales receipts
+- Customer payments
+- Purchase receipts
+- Supplier payments
                         
-                        
+
 Filter and grouping added to search views
                         
-                        
+
 To do:
-                        - customer payments, supplier payments: lines not being removed on company change
-                        - apply domains in: view_low_priority_payment_form, view_vendor_receipt_dialog_form 
+- customer payments, supplier payments: lines not being removed on company change
+- apply domains in: view_low_priority_payment_form, view_vendor_receipt_dialog_form 
+                        
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
                         
 
 

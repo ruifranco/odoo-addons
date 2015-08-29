@@ -19,7 +19,7 @@ http://pt.linkedin.com/in/ruipedrosafranco
 
 
 [ CATEGORY ]
-Ferramentas extras
+Extra Tools
 
 
 [ LICENSE ]
@@ -33,6 +33,8 @@ AGPL-3
 
 This module assumes you have ZIP installed in your system.
 
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+
 
 
 [ MENUS ]
@@ -41,6 +43,7 @@ This module assumes you have ZIP installed in your system.
 
 [ VIEWS ]
 * INHERIT module_readme_creator_module_form (form)
+Repository manager settings (form)
 
 
 [ REPORTS ]

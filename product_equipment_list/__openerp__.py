@@ -26,7 +26,9 @@
 	'category'      : 'Extra Tools',
     'summary'       : 'Management of equipment lists',
 	'description'   : """
-                        - Allows to define lists of equipment
+- Allows to define lists of equipment
+                        
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
                         """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
@@ -34,6 +36,9 @@
 	'data'          : [
 	                   'security/ir.model.access.csv',
 	                   'views/equipment_view.xml',
+	                   
+	                   #'views/report_equipment_list.xml',
+                       #'equipment_report.xml',
 	                   ],
     'installable'   : True,
     'active'        : False,

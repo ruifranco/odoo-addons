@@ -27,7 +27,11 @@ AGPL-3
 
 
 [ DESCRIPTION ]
+
 Allows to define clothing sizes according to country rules
+
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+                        
 
 
 [ MENUS ]

@@ -25,7 +25,7 @@
 	'version'       : '1.0',
 	'category'      : 'Extra Tools',
 	'summary'       : 'Adds a description field to a scheduled task',
-	'description'   : '',
+	'description'   : """MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco""",
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
 	'depends'       : ['base'],

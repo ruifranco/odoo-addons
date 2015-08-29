@@ -42,6 +42,9 @@ NOTES:
 
 
 
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+
+
 
 [ MENUS ]
 

@@ -28,6 +28,8 @@
 	'description'   : """
 Preenche a informação relativa a 'Distrito', 'Concelho' e 'Freguesia'.\n\n
 Loads info concerning 'Distrito', 'Concelho', 'Freguesia'\n\n
+
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
 """,
 	'author'        : 'Rui Pedrosa Franco',
     'depends'       : ['address_extended'],

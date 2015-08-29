@@ -1,9 +1,9 @@
 [ NAME ]
-product_equipment_list
+scheduled_task_description
 
 
 [ SUMMARY ]
-Product - equipment list
+Scheduled task - description
 
 
 [ AUTHOR ]
@@ -27,11 +27,7 @@ AGPL-3
 
 
 [ DESCRIPTION ]
-
-- Allows to define lists of equipment
-                        
 MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
-                        
 
 
 [ MENUS ]

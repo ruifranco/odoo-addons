@@ -1,9 +1,9 @@
 [ NAME ]
-product_equipment_list
+event_note
 
 
 [ SUMMARY ]
-Product - equipment list
+Events - notes
 
 
 [ AUTHOR ]
@@ -28,8 +28,6 @@ AGPL-3
 
 [ DESCRIPTION ]
 
-- Allows to define lists of equipment
-                        
 MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
                         
 

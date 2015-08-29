@@ -24,22 +24,23 @@
     'name'          : 'Multicompany enforcement: voucher',
     'version'       : '1.0',
     'category'      : 'Localisation/Account',
+    'summary'       : 'Domain and filter enforcement in a multicompany environment',
     'description'   : """
-                        Module developed for Odoo 8
+Enforces domains and filters according to chosen company in a multicompany environment.
     
-                        Enforces domains and filters according to chosen company in a multicompany environment.
-    
-                        \nField domains applied in:
-                        - Sales receipts
-                        - Customer payments
-                        - Purchase receipts
-                        - Supplier payments
+\nField domains applied in:
+- Sales receipts
+- Customer payments
+- Purchase receipts
+- Supplier payments
                         
-                        \nFilter and grouping added to search views
+\nFilter and grouping added to search views
                         
-                        \nTo do:
-                        - customer payments, supplier payments: lines not being removed on company change
-                        - apply domains in: view_low_priority_payment_form, view_vendor_receipt_dialog_form 
+\nTo do:
+- customer payments, supplier payments: lines not being removed on company change
+- apply domains in: view_low_priority_payment_form, view_vendor_receipt_dialog_form 
+                        
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
                         """,
     'author'        : 'Rui Pedrosa Franco',
     'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',

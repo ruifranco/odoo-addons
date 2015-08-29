@@ -25,12 +25,16 @@
 	'version'       : '1.0',
 	'category'      : 'Technical Settings',
     'summary'       : 'Definition of clothing sizes',
-	'description'   : 'Allows to define clothing sizes according to country rules',
+	'description'   : """
+Allows to define clothing sizes according to country rules
+
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+                        """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
 	'depends'       : ['base'],
 	'data'          : [
-                       'security/ir.model.access.csv',
+                        'security/ir.model.access.csv',
 	
                         'data/clothing_sizes_types_data.xml',
                         'data/clothing_sizes_general_data.xml',

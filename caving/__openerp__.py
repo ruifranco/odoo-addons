@@ -31,6 +31,8 @@
 This module is the first piece of an application that aims to be a caving information system with which caving groups will be able to record everything concerning their activities.
 
 Don't hesitate to give some feedback.
+
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
 """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
@@ -38,6 +40,7 @@ Don't hesitate to give some feedback.
                         'mail',
                         'document',
                         'gps_base',
+                        'contacts',
                         ],
     'demo'          : ['data/caving_demo.xml'],
     'data'          : [

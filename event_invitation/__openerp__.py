@@ -34,10 +34,8 @@ NOTES:\n
 - invitations by bulk mail are not individually trackable\n
 - in bulk messages, the "TO" field contains all email addresses\n
 
-TODO:\n
-- further translation\n
-- hide send button if the event is done or cancelled\n
-- users should be able to see only their invitations
+
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
 """,
 
 	'author'        : 'Rui Pedrosa Franco',

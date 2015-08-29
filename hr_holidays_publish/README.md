@@ -3,7 +3,7 @@ hr_holidays_publish
 
 
 [ SUMMARY ]
-HR Holidays Publish
+HR Holidays - Publish
 
 
 [ AUTHOR ]
@@ -32,15 +32,16 @@ By default, Odoo only allows employees to see their own leaves. This is not prac
 By not being able to know about other's requests, employees have to go through HR in what might be a frustrating process.
 With this module, each employee has the chance of letting others know about his leaves, thus contributing to the transparency and easyness inside the company.
 
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+
 
 
 [ MENUS ]
-Human Resources/Leaves/Settings (publish)
+
 
 
 [ VIEWS ]
 * INHERIT hr_holidays_publish_view_employee_form (form)
-view_hr_holidays_publish_tree (tree)
 
 
 [ REPORTS ]
