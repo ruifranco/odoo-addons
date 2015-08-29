@@ -26,16 +26,18 @@
 	'category'      : 'Extra Tools',
     'summary'       : 'Management of equipment lists for events',
 	'description'   : """
-                        - Allows to define lists of equipment associated to an event
-                        - Partners may define what kind of equipment they possess (from the ones associated to any event they have registered in)
-                        - Equipment can be associated to the attendants or to the event itself
-                        - Partner field is shown in the event's registration lines
-                        - Equipment lists can be associated to event types
-                        - Event type becomes mandatory
-                        - Shows equipment list in the event type tree view
+- Allows to define lists of equipment associated to an event
+- Partners may define what kind of equipment they possess (from the ones associated to any event they have registered in)
+- Equipment can be associated to the attendants or to the event itself
+- Partner field is shown in the event's registration lines
+- Equipment lists can be associated to event types
+- Event type becomes mandatory
+- Shows equipment list in the event type tree view
                         
-                        NOTE:
-                        - (event.event) equipment_host_text and equipment_participants_text hold the equipment list as text
+NOTE:
+- (event.event) equipment_host_text and equipment_participants_text hold the equipment list as text
+                        
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
                         """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
@@ -51,8 +53,6 @@
 	                   
                        'views/report_equipment_host.xml',
 	                   'equipment_report.xml',
-	                   
-	                   
 	                   ],
     'installable'   : True,
     'active'        : False,
