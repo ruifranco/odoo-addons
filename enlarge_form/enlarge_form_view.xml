@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="layout" inherit_id="web.layout">
+            <xpath expr="." positon="inside">
+                <link rel="stylesheet" href='/enlarge_form/static/src/css/enlarge_form.css'/>
+            </xpath>
+        </template>
+        
+  
+        <record id="enlarge_form_view_view_form" model="ir.ui.view">
+            <field name="model">ir.ui.view</field>
+            <field name="inherit_id" ref="base.view_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='priority']" position="after">
+                    <field name="enlarge_form"/>
+                </xpath>
+            </field>
+        </record>
+ </data>
+</openerp>
