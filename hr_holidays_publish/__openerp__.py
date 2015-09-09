@@ -41,7 +41,6 @@ MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+
                        'hr_holidays_publish_data.xml',
                        'hr_holidays_publish_view.xml',
                        ],
-    'price'         : 10.00,
     'currency'      : 'EUR',
     'installable'   : True,
     'active'        : False,
