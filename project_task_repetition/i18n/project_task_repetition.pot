@@ -1,0 +1,286 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* project_task_repetition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-ee69792\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-25 10:28+0000\n"
+"PO-Revision-Date: 2015-10-25 10:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,byday:0
+msgid "By day"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task.repetition.wizard:project_task_repetition.project_task_repetition_wizard_view
+msgid "Cancel"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task.repetition.wizard:project_task_repetition.project_task_repetition_wizard_view
+#: field:project.task.repetition.wizard,change_date:0
+msgid "Change date (if it is invalid)"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task,ptr_child_ids:0
+msgid "Child tasks"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,count:0
+msgid "Count"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task:project_task_repetition.project_task_repetition_view_task_form2
+msgid "Create repetition"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task.repetition.wizard:project_task_repetition.project_task_repetition_wizard_view
+msgid "Create tasks"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,day:0
+#: selection:project.task.repetition.wizard,month_by:0
+msgid "Date of month"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task.repetition.wizard:project_task_repetition.project_task_repetition_wizard_view
+#: selection:project.task.repetition.wizard,month_by:0
+msgid "Day of month"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,rrule_type:0
+msgid "Day(s)"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task:project_task_repetition.project_task_repetition_view_task_form2
+msgid "Delete child tasks"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task:project_task_repetition.project_task_repetition_view_task_form2
+msgid "Delete sister tasks"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,end_type:0
+msgid "End date"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,byday:0
+msgid "Fifth"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,byday:0
+msgid "First"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,byday:0
+msgid "Fourth"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,fr:0
+msgid "Fri"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,week_list:0
+msgid "Friday"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,interval:0
+msgid "Interval"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,byday:0
+msgid "Last"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,mo:0
+msgid "Mon"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,week_list:0
+msgid "Monday"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,rrule_type:0
+msgid "Month(s)"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,change_date:0
+msgid "Next available day"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,end_type:0
+msgid "Number of repetitions"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,month_by:0
+msgid "Option"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,task_id:0
+msgid "Original task"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task,ptr_parent_id:0
+msgid "Parent task"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,rrule_type:0
+msgid "Period"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,change_date:0
+msgid "Previous available day"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,final_date:0
+msgid "Repeat Until"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task:project_task_repetition.project_task_repetition_view_task_form2
+msgid "Repetition"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,sa:0
+msgid "Sat"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,week_list:0
+msgid "Saturday"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,byday:0
+msgid "Second"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task.repetition.wizard:project_task_repetition.project_task_repetition_wizard_view
+msgid "Select Weekdays"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,su:0
+msgid "Sun"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,week_list:0
+msgid "Sunday"
+msgstr ""
+
+#. module: project_task_repetition
+#: model:ir.model,name:project_task_repetition.model_project_task
+msgid "Task"
+msgstr ""
+
+#. module: project_task_repetition
+#: help:project.task,ptr_parent_id:0
+msgid "Task from which this one originated"
+msgstr ""
+
+#. module: project_task_repetition
+#: help:project.task,ptr_child_ids:0
+msgid "Tasks originated from this one"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task.repetition.wizard:project_task_repetition.project_task_repetition_wizard_view
+msgid "The"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,byday:0
+msgid "Third"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,th:0
+msgid "Thu"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,week_list:0
+msgid "Thursday"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,tu:0
+msgid "Tue"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,week_list:0
+msgid "Tuesday"
+msgstr ""
+
+#. module: project_task_repetition
+#: view:project.task.repetition.wizard:project_task_repetition.project_task_repetition_wizard_view
+#: field:project.task.repetition.wizard,end_type:0
+msgid "Until"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,we:0
+msgid "Wed"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,week_list:0
+msgid "Wednesday"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,rrule_type:0
+msgid "Week(s)"
+msgstr ""
+
+#. module: project_task_repetition
+#: field:project.task.repetition.wizard,week_list:0
+msgid "Weekday"
+msgstr ""
+
+#. module: project_task_repetition
+#: selection:project.task.repetition.wizard,rrule_type:0
+msgid "Year(s)"
+msgstr ""
+

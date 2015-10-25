@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="project_task_repetition_view_task_form2">
+            <field name="name">project_task_repetition_view_task_form2</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[last()]" position="after">
+                    <page string="Repetition" attrs="{'invisible': [('create_date', '=', False)]}">
+                        <div style="float:right;">
+                            <field name="create_date" invisible="1"/>
+                            <button name="ptr_call_repetition_wizard" type="object" string="Create repetition"/>
+                        </div>
+                        <group>
+                            <field name="ptr_parent_id" attrs="{'invisible':[('ptr_parent_id','=',False)]}"/>   
+                            <field name="ptr_child_ids" attrs="{'invisible':[('ptr_child_ids','=',[])]}">
+                                <tree create="0" edit="1">
+                                    <field name="name"/>
+                                    <field name="user_id"/>
+                                    <field name="reviewer_id"/>
+                                    <field name="date_deadline"/>
+                                </tree>
+                            </field>
+	                    </group>
+	                    <group>
+                            <div style="float:right;">
+                                <button name="ptr_delete_child_tasks" type="object" string="Delete child tasks" 
+                                    attrs="{'invisible':[('ptr_child_ids','=',[])]}"/>
+                                
+                                <field name="ptr_has_sisters" invisible="1"/>
+                                
+                                <button name="ptr_delete_sister_tasks" type="object" string="Delete sister tasks" 
+                                    attrs="{'invisible':['|',('ptr_parent_id','=',False),('ptr_has_sisters','=',False)]}"/>
+                            </div>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        
+        
+        
+        
+        
+        
+        
+        <record id="project_task_repetition_wizard_view" model="ir.ui.view">
+            <field name="name">project_task_r_wizard_view</field>
+            <field name="model">project.task.repetition.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group cols="2">
+                        <group>
+                            <field name="task_id" />
+                            <label for="interval"/>
+                            <div>
+                                <field name="interval" class="oe_inline"/>
+                                <field name="rrule_type" class="oe_inline"/>
+                            </div>
+                            <label string="Until" for="end_type"/>
+                            <div>
+                                <field name="end_type" class="oe_inline"/>
+                                <field name="count" attrs="{'invisible': [('end_type', '!=', 'count')]}" class="oe_inline"/>
+                                <field name="final_date" attrs="{'invisible': [('end_type', '!=', 'end_date')], 'required': [('end_type', '=', 'end_date')]}" class="oe_inline"/>
+                            </div>
+                            <label string="Select Weekdays" attrs="{'invisible' :[('rrule_type','not in', ['weekly'])]}"/>
+                            <group col="2" colspan="1" name="weekdays" attrs="{'invisible' :[('rrule_type','not in', ['weekly'])]}">
+                                <field name="mo"/>
+                                <field name="tu"/>
+                                <field name="we"/>
+                                <field name="th"/>
+                                <field name="fr"/>
+                                <field name="sa"/>
+                                <field name="su"/>
+                            </group>
+                            <label string="Day of month" attrs="{'invisible': [('rrule_type','!=','monthly')]}"/>
+                            <div attrs="{'invisible': [('rrule_type','!=','monthly')]}">
+                                <field name="month_by"/>
+                                <field name="day" attrs="{'required': [('month_by','=','date'), ('rrule_type','=','monthly')], 'invisible': ['|',('month_by','=','day'),('month_by','=',False)]}"/>
+                                <label for="change_date" string="Change date (if it is invalid)" attrs="{'required': [('month_by','=','date'), ('rrule_type','=','monthly')], 'invisible': ['|',('month_by','=','day'),('month_by','=',False)]}"/>
+                                <field name="change_date" attrs="{'required': [('month_by','=','date'), ('rrule_type','=','monthly')], 'invisible': ['|',('month_by','=','day'),('month_by','=',False)]}"/>
+                                <field name="byday" string="The" attrs="{'required': [('month_by','=','day'), ('rrule_type','=','monthly')], 'invisible': ['|',('month_by','=','date'),('month_by','=',False)]}"/>
+                                <field name="week_list" nolabel="1" attrs="{'required': [('month_by','=','day'), ('rrule_type','=','monthly')], 'invisible': ['|',('month_by','=','date'),('month_by','=',False)]}"/>
+                            </div>
+                        </group>
+                        <group></group>
+                    </group>
+                    <footer>
+                        <div style="float:right;">
+                            <button type="object" name="create_repetition" string='Create tasks'/>
+	                        <button special="cancel" string="Cancel"/>
+	                    </div>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>
