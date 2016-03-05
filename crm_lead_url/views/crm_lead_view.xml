@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- CRM Lead Form View  -->
+        <record model="ir.ui.view" id="crm_lead_url_crm_case_form_view_leads">
+            <field name="name">CRM Lead URL (lead)</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[1]" position="before">
+                    <div class="oe_title">
+                        <label for="url" class="oe_edit_only"/>
+                        <field name="url" widget="url"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!-- Opportunities Form View -->
+        <record model="ir.ui.view" id="crm_lead_url_crm_case_form_view_oppor">
+            <field name="name">CRM Lead URL (opportunity)</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//h1[1]" position="after">
+                    <div class="oe_title">
+                        <label for="url" class="oe_edit_only"/>
+                        <field name="url" widget="url"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</openerp>
