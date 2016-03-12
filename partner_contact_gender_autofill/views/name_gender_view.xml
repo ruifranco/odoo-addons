@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="name_gender_tree_view" model="ir.ui.view">
+            <field name="name">name_gender_tree_view</field>
+            <field name="model">name.gender</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                    <field name="gender"/>
+                </tree>
+            </field>
+        </record>
+
+        
+        <record id="action_name_gender_view" model="ir.actions.act_window">
+            <field name="name">Name/gender relation</field>
+            <field name="res_model">name.gender</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+               
+        <menuitem id="menu_name_gender_tree_view" 
+                    name="Name/gender"
+                    parent="base.menu_localisation"  
+                    sequence="1"
+                    action="action_name_gender_view"/>        
+        
+        
+    </data>
+</openerp>

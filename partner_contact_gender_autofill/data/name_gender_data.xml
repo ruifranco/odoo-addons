@@ -1,0 +1,5 @@
+<openerp>
+    <data noupdate="1">
+        <function model="name.gender" name="_load_partner_data"/>
+    </data>
+</openerp>

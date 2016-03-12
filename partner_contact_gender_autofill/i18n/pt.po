@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * partner_contact_gender_autofill
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160227\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-12 15:34+0000\n"
+"PO-Revision-Date: 2016-03-12 15:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: partner_contact_gender_autofill
+#: selection:name.gender,gender:0
+msgid "Female"
+msgstr "Mulher"
+
+#. module: partner_contact_gender_autofill
+#: model:ir.model.fields,field_description:partner_contact_gender_autofill.field_name_gender_gender
+msgid "Gender"
+msgstr "Género"
+
+#. module: partner_contact_gender_autofill
+#: selection:name.gender,gender:0
+msgid "Male"
+msgstr "Homem"
+
+#. module: partner_contact_gender_autofill
+#: model:ir.model.fields,field_description:partner_contact_gender_autofill.field_name_gender_name
+msgid "Name"
+msgstr "Nome"
+
+#. module: partner_contact_gender_autofill
+#: sql_constraint:name.gender:0
+msgid "Name already exists!"
+msgstr "O nome já existe!"
+
+#. module: partner_contact_gender_autofill
+#: model:ir.ui.menu,name:partner_contact_gender_autofill.menu_name_gender_tree_view
+msgid "Name/gender"
+msgstr "Nome/género"
+
+#. module: partner_contact_gender_autofill
+#: model:ir.actions.act_window,name:partner_contact_gender_autofill.action_name_gender_view
+msgid "Name/gender relation"
+msgstr "Relaçãoo nome/género"
+
