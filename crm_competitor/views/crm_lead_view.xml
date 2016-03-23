@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Opportunities Form View -->
+        <record model="ir.ui.view" id="crm_competitor_crm_case_form_view_oppor">
+            <field name="name">crm_competitor_crm_case_form_view_oppor</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='lead']" position="after">
+                    <page name="competition" string="Competition">
+                        <field name="competitor_ids">
+                            <tree editable="top">
+                                <field name="partner_id" context="{'default_competitor':True,'default_customer':False,'default_supplier':False}"/>
+                                <field name="value"/>
+                                <field name="note"/>
+                                <field name="winner"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='lost_reason']" position="after">
+                    <field name="winner_id" attrs="{'invisible':[('winner_id','=',False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        
+        <record model="ir.ui.view" id="crm_competitor_crm_case_form_view_leads">
+            <field name="name">crm_competitor_crm_case_form_view_leads</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[last()]" position="after">
+                    <page name="competition" string="Competition" attrs="{'invisible':['|',('active','=',True),('type','=','lead')]}">
+                        <field name="competitor_ids">
+                            <tree editable="top">
+                                <field name="partner_id" context="{'default_competitor':True,'default_customer':False,'default_supplier':False}"/>
+                                <field name="value"/>
+                                <field name="note"/>
+                                <field name="winner"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <field name="lost_reason" attrs="{'invisible':[('active','=',True)]}"/>
+                    <field name="winner_id" attrs="{'invisible':[('winner_id','=',False)]}"/>
+                </xpath>
+                
+            </field>
+        </record>
+                
+        
+        
+        <record id="crm_competitor_crm_lead_lost_view_form" model="ir.ui.view">
+            <field name="name">crm_competitor_crm_lead_lost_view_form</field>
+            <field name="model">crm.lead.lost</field>
+            <field name="inherit_id" ref="crm.crm_lead_lost_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='lost_reason_id']" position="after">
+                    <field name="winner_id" domain="[('lead_id','=',lead_id)]" widget="selection"/>
+                </xpath>
+            </field>
+        </record>        
+        
+
+        <!-- CRM Lead Search View -->
+        <record id="crm_competitor_view_crm_case_opportunities_filter" model="ir.ui.view">
+            <field name="name">crm_competitor_view_crm_case_opportunities_filter</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/filter[last()]" position="after">
+                    <filter string="Competitor (winner)" context="{'group_by':'winner_id'}" domain="['|',('active','=',True),('active','=',False)]"/>
+                </xpath>
+            </field>
+        </record>
+        
+
+        
+        <record model="ir.ui.view" id="crm_competitor_crm_case_tree_view_oppor">
+            <field name="name">crm_competitor_crm_case_tree_view_oppor</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="winner_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_competitor_crm_case_kanban_view_leads">
+            <field name="name">crm_competitor_crm_case_kanban_view_leads</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_action']" position="after">
+                    <field name="winner_id"/>
+                </xpath>
+            </field>
+        </record>
+            
+    </data>
+</openerp>

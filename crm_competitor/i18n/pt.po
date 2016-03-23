@@ -1,0 +1,109 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * crm_competitor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160227\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-23 08:48+0000\n"
+"PO-Revision-Date: 2016-03-23 08:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_competitor
+#: model:ir.actions.act_window,help:crm_competitor.action_partner_competitor_form
+msgid "Click to add a competitor in your address book."
+msgstr "Carregue para adicionar um concorrente ao seu livro de endereços"
+
+#. module: crm_competitor
+#: model:ir.ui.view,arch_db:crm_competitor.crm_competitor_crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_competitor.crm_competitor_crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:crm_competitor.crm_competitor_view_partner_form
+msgid "Competition"
+msgstr "Concorrência"
+
+#. module: crm_competitor
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_competition_partner_id
+#: model:ir.model.fields,field_description:crm_competitor.field_res_partner_competitor
+msgid "Competitor"
+msgstr "Concorrente"
+
+#. module: crm_competitor
+#: model:ir.ui.view,arch_db:crm_competitor.crm_competitor_view_crm_case_opportunities_filter
+msgid "Competitor (winner)"
+msgstr "Concorrente (vencedor)"
+
+#. module: crm_competitor
+#: model:ir.actions.act_window,name:crm_competitor.action_partner_competitor_form
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_competitor_ids
+#: model:ir.ui.menu,name:crm_competitor.menu_partner_competitor_form
+#: model:ir.ui.view,arch_db:crm_competitor.crm_competitor_view_res_partner_filter
+msgid "Competitors"
+msgstr "Concorrentes"
+
+
+#. module: crm_competitor
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_competition_display_name
+msgid "Display Name"
+msgstr "Nome"
+
+#. module: crm_competitor
+#: model:ir.model,name:crm_competitor.model_crm_lead_lost
+msgid "Get Lost Reason"
+msgstr "Razão da perda"
+
+
+#. module: crm_competitor
+#: model:ir.model,name:crm_competitor.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Dica/oportunidade"
+
+#. module: crm_competitor
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_competition_note
+msgid "Note"
+msgstr "Observações"
+
+
+#. module: crm_competitor
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_competition_lead_id
+msgid "Oportunity"
+msgstr "Oportunidade"
+
+#. module: crm_competitor
+#: model:ir.model,name:crm_competitor.model_res_partner
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: crm_competitor
+#: sql_constraint:crm.lead.competition:0
+msgid "There's already a proposal for this competitor!"
+msgstr "Já existe uma proposta deste concorrente"
+
+#. module: crm_competitor
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_competition_value
+msgid "Value"
+msgstr "Valor"
+
+#. module: crm_competitor
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_competition_winner
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_lost_winner_id
+#: model:ir.model.fields,field_description:crm_competitor.field_crm_lead_winner_id
+msgid "Winner"
+msgstr "Vencedor"
+
+#. module: crm_competitor
+#: model:ir.ui.view,arch_db:crm_competitor.crm_competitor_view_partner_form
+msgid "Won leads"
+msgstr "Op. vencidas"
+
+
+#. module: crm_competitor
+#: code:addons/crm_competitor/models/res_partner.py:41
+#, python-format
+msgid "Won opportunities"
+msgstr "Oportunidades vencidas"
