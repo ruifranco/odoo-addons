@@ -37,14 +37,21 @@
     . see update button in module's kanban view
     . see latest update in all module views
 - better logging
+
+- In rules list, the global field is replaced by the groups
+
+
                         """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
 	'depends'       : ['base'],
 	'data'          : [
                        'security/security_data.xml',
-                       'developer_tweaks_view.xml',
+                       'views/developer_tweaks_view.xml',
+                       'views/ir_rule_view.xml',
+                       'data/odooveloper_data.xml',
                         ],
+    'images':['static/description/main_screenshot.jpg'],                        
     'installable'   : True,
     'active'        : False,
 }
