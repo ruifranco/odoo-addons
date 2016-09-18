@@ -51,7 +51,7 @@
                        'views/ir_rule_view.xml',
                        'data/odooveloper_data.xml',
                         ],
-    'images':['static/description/main_screenshot.jpg'],                        
+    'images'        : ['static/description/main_screenshot.png'],
     'installable'   : True,
     'active'        : False,
 }
