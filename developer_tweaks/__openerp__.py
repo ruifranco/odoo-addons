@@ -45,6 +45,7 @@
                        'security/security_data.xml',
                        'developer_tweaks_view.xml',
                         ],
+    'images'        : ['static/description/main_screenshot.png'],
     'installable'   : True,
     'active'        : False,
 }
