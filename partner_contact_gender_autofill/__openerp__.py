@@ -33,8 +33,10 @@
     'data'          : [
                        'security/ir.model.access.csv',
                        'data/name_gender_data.xml',
+                       'data/odooveloper_data.xml',
                        'views/name_gender_view.xml',
                        ],
+    'images'        : ['static/description/main_screenshot.png'],
     'installable'   : True,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

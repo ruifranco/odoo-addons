@@ -30,7 +30,11 @@
     'author'        : 'Rui Pedrosa Franco',
     'website'       : 'http://www.odooveloper.com',
     'depends'       : ['crm'],
-    'data'          : ['views/crm_lead_view.xml'],
+    'data'          : [
+                       'views/crm_lead_view.xml',
+                       'data/odooveloper_data.xml',
+                       ],
+    'images'        : ['static/description/main_screenshot.png'],
     'installable'   : True,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
