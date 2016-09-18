@@ -32,7 +32,7 @@ This module is the first piece of an application that aims to be a caving inform
 
 Don't hesitate to give some feedback.
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
 """,
 	'author'        : 'Rui Pedrosa Franco',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
@@ -58,6 +58,7 @@ MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+
                         'view/caving_gas_view.xml',
                         'view/caving_view.xml'
                         ],
+    'images'        : ['static/description/main_screenshot.png'],
     'installable'   : True,
     'active'        : False,
 }
