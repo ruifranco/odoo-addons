@@ -33,7 +33,9 @@
     'data'          : [
                        'views/res_partner_view.xml',
                        'views/crm_lead_view.xml',
+                       'data/odooveloper_data.xml',
                        ],
+    'images'        : ['static/description/main_screenshot.png'],
     'installable'   : True,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
