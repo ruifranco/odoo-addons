@@ -31,10 +31,10 @@ By default, Odoo only allows employees to see their own leaves. This is not prac
 By not being able to know about other's requests, employees have to go through HR in what might be a frustrating process.
 With this module, each employee has the chance of letting others know about his leaves, thus contributing to the transparency and easyness inside the company.
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
 """,
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['hr_holidays'],
 	'data'          : [
                        'security/ir.model.access.csv',

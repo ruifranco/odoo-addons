@@ -37,10 +37,10 @@
 NOTE:
 - (event.event) equipment_host_text and equipment_participants_text hold the equipment list as text
                         
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
                         """,
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
 	'depends'       : [
 	                   'product_equipment_list',
 	                   'event',

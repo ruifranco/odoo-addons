@@ -26,10 +26,10 @@
 	'category'      : 'Extra Tools',
 	'summary'       : 'Adds a note field to an event',
 	'description'   : """
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
                         """,
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['event'],
 	'data'          : ['event_view.xml'],
     'installable'   : True,

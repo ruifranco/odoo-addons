@@ -34,8 +34,8 @@ Don't hesitate to give some feedback.
 
 MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
 """,
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
 	'depends'       : [
                         'mail',
                         'document',

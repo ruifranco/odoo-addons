@@ -35,10 +35,10 @@ PS:
 - map widget is based on Dorin Hongu's web_gmaps module
 - JavaScript had an invaluable help from Dinil UD
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
                         """,
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['web'],
 	'data'          : [
                         'views/gps_base_view.xml',

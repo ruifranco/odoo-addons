@@ -37,9 +37,11 @@
     . see update button in module's kanban view
     . see latest update in all module views
 - better logging
+
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
                         """,
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['base'],
 	'data'          : [
                        'security/security_data.xml',

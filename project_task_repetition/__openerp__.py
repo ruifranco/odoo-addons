@@ -25,9 +25,13 @@
 	'version'       : '1.0',
 	'category'      : 'Extra Tools',
     'summary'       : 'Allows to set repetition of project tasks',
-	'description'   : 'With this module you are able to repeat project tasks pretty much in the same way as you repeat calendar events.',
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'description'   : """
+With this module you are able to repeat project tasks pretty much in the same way as you repeat calendar events.
+
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u	
+	""",
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
     'depends'       : ['project'],
 	'data'          : ['project_task_repetition_view.xml'],
     'installable'   : True,

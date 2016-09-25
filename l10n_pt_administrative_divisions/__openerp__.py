@@ -29,11 +29,11 @@
 Preenche a informação relativa a 'Distrito', 'Concelho' e 'Freguesia'.\n\n
 Loads info concerning 'Distrito', 'Concelho', 'Freguesia'\n\n
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
 """,
-	'author'        : 'Rui Pedrosa Franco',
+	'author'        : 'Odooveloper (Rui Franco)',
     'depends'       : ['address_extended'],
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'website'       : 'http://www.odooveloper.com',
 	'data'          : ['data/address_extended.places.csv',],
     'installable'   : True,
     'active'        : False,

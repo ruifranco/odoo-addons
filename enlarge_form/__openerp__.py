@@ -33,10 +33,10 @@ WARNING:\n
 - You should always check in the 'Inherited Views' tab for the existence of a view of the '_enlarge_form' type.\n
 If it is not there, repeat the operation.
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
                     """,
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['base'],
 	'data'          : ['enlarge_form_view.xml',],
 	'css'           : ['static/src/css/enlarge_form.css'],

@@ -28,10 +28,10 @@
 	'description'   : """
 Adds three hierarchically dependent fields so that more info can be saved on addresses (typically, region, county, etc.).
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://www.odoo.com/apps?search=rui+pedrosa+franco
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
                         """,
-	'author'        : 'Rui Pedrosa Franco',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper (Rui Franco)',
+	'website'       : 'http://www.odooveloper.com',
 	'data'          : [
                         'security/ir.model.access.csv',
                         'address_extended_view.xml',
