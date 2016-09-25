@@ -27,7 +27,7 @@
     'category'      : 'CRM',
     'summary'       : "Enables following competitor's activity",
     'description'   : """Let's you record competitor's activity for a lead/opportunity""",
-    'author'        : 'Rui Pedrosa Franco',
+    'author'        : 'Odooveloper (Rui Franco)',
     'website'       : 'http://www.odooveloper.com',
     'depends'       : ['crm'],
     'data'          : [

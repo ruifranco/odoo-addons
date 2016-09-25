@@ -42,7 +42,7 @@
 
 
                         """,
-	'author'        : 'Rui Pedrosa Franco',
+	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
 	'depends'       : ['base'],
 	'data'          : [
