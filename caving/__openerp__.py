@@ -32,7 +32,7 @@ This module is the first piece of an application that aims to be a caving inform
 
 Don't hesitate to give some feedback.
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
 """,
 	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',

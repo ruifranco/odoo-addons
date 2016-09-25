@@ -26,7 +26,7 @@
 	'category'      : 'Extra Tools',
 	'summary'       : 'Adds a note field to an event',
 	'description'   : """
-MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
 	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',

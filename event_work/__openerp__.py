@@ -28,7 +28,7 @@
 	'description'   : """
 This will let you associate a project-task work line with an event so that you will know what work was done during that specific event.
 	
-MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
 	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',

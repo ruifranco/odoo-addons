@@ -28,7 +28,7 @@
 	'description'   : """
 With this module you are able to repeat project tasks pretty much in the same way as you repeat calendar events.
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u	
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F	
 	""",
 	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',

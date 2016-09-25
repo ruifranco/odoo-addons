@@ -28,7 +28,7 @@
 	'description'   : """
 Adds three hierarchically dependent fields so that more info can be saved on addresses (typically, region, county, etc.).
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
 	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',

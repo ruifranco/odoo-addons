@@ -33,7 +33,7 @@ WARNING:\n
 - You should always check in the 'Inherited Views' tab for the existence of a view of the '_enlarge_form' type.\n
 If it is not there, repeat the operation.
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                     """,
 	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',

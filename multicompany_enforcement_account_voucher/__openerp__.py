@@ -40,7 +40,7 @@ Enforces domains and filters according to chosen company in a multicompany envir
 - customer payments, supplier payments: lines not being removed on company change
 - apply domains in: view_low_priority_payment_form, view_vendor_receipt_dialog_form 
                         
-MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
     'author'        : 'Odooveloper (Rui Franco)',
     'website'       : 'http://www.odooveloper.com',

@@ -25,7 +25,7 @@
 	'version'       : '1.0',
 	'category'      : 'Extra Tools',
 	'summary'       : 'Adds a description field to a scheduled task',
-	'description'   : """MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u""",
+	'description'   : """MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F""",
 	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['base'],

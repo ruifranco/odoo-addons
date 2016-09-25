@@ -35,7 +35,7 @@ NOTES:\n
 - in bulk messages, the "TO" field contains all email addresses\n
 
 
-MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
+MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
 """,
 
 	'author'        : 'Odooveloper (Rui Franco)',
