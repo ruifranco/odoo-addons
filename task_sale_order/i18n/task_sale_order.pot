@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* task_sale_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160526\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-02 07:46+0000\n"
+"PO-Revision-Date: 2016-10-02 07:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: task_sale_order
+#: model:ir.ui.view,arch_db:task_sale_order.view_order_form4
+msgid "Completion (%)"
+msgstr ""
+
+#. module: task_sale_order
+#: model:ir.ui.view,arch_db:task_sale_order.view_order_form2
+msgid "Done (%)"
+msgstr ""
+
+#. module: task_sale_order
+#: model:ir.model.fields,help:task_sale_order.field_sale_order_line_task_completion
+#: model:ir.model.fields,help:task_sale_order.field_sale_order_task_completion
+msgid "Percentage of tasks with a stage that is considered as a closing one"
+msgstr ""
+
+#. module: task_sale_order
+#: model:ir.model.fields,field_description:task_sale_order.field_sale_order_line_so_tasks_count
+msgid "SO task count"
+msgstr ""
+
+#. module: task_sale_order
+#: model:ir.model,name:task_sale_order.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: task_sale_order
+#: model:ir.model,name:task_sale_order.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: task_sale_order
+#: model:ir.model.fields,field_description:task_sale_order.field_sale_order_line_task_completion
+#: model:ir.model.fields,field_description:task_sale_order.field_sale_order_task_completion
+msgid "Task completion"
+msgstr ""
+
+#. module: task_sale_order
+#: model:ir.model.fields,field_description:task_sale_order.field_sale_order_line_task_ids
+msgid "Tasks"
+msgstr ""
+
