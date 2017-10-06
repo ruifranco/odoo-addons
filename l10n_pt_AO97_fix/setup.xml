@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
 		<function model="l10n_pt_ao97_fix.setup" name="fix_translation"/>
 
     </data>
-</openerp>
+</odoo>
