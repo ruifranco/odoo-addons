@@ -27,8 +27,6 @@
     'summary'       : 'Extra fields to save more info on addresses',
 	'description'   : """
 Adds three hierarchically dependent fields so that more info can be saved on addresses (typically, region, county, etc.).
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
 	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',

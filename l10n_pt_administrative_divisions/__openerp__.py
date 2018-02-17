@@ -28,8 +28,6 @@
 	'description'   : """
 Preenche a informação relativa a 'Distrito', 'Concelho' e 'Freguesia'.\n\n
 Loads info concerning 'Distrito', 'Concelho', 'Freguesia'\n\n
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
 """,
 	'author'        : 'Odooveloper (Rui Franco)',
     'depends'       : ['address_extended'],
