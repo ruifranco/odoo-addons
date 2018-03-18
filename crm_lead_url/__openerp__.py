@@ -27,7 +27,7 @@
     'category'      : 'Customer Relationship Management',
     'summary'       : 'Adds a URL field to leads and opportunities',
     'description'   : 'Adds a URL field to leads and opportunities',
-    'author'        : 'Odooveloper (Rui Franco)',
+    'author'        : 'Odooveloper',
     'website'       : 'http://www.odooveloper.com',
     'depends'       : ['crm'],
     'data'          : [

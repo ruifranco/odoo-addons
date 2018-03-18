@@ -42,8 +42,8 @@
 
 
                         """,
-	'author'        : 'Odooveloper (Rui Franco)',
-	'website'       : 'http://pt.linkedin.com/in/ruipedrosafranco',
+	'author'        : 'Odooveloper',
+	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['base'],
 	'data'          : [
                        'security/security_data.xml',

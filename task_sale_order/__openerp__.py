@@ -33,10 +33,8 @@
 
 WARNING: since there is no sure way to know if a task stage is of the "cancelled" type, 
 results may not be accurate in case you cancel tasks.
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
 """,
-    'author'        : 'Odooveloper (Rui Franco)',
+    'author'        : 'Odooveloper',
     'website'       : 'http://www.odooveloper.com',
     'depends'       : ['sale_service'],
     'data'          : [

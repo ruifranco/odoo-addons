@@ -27,7 +27,7 @@
     'category'      : 'Customer Relationship Management',
     'summary'       : "Automatic selection of a contact's gender",
     'description'   : """This module extends OCA's 'partner_contact_gender' module allowing for contact's gender to be autofilled according to the name.""",
-    'author'        : 'Odooveloper (Rui Franco)',
+    'author'        : 'Odooveloper',
     'website'       : 'http://www.odooveloper.com',
     'depends'       : ['partner_contact_gender'],
     'data'          : [
