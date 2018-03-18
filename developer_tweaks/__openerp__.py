@@ -37,10 +37,8 @@
     . see update button in module's kanban view
     . see latest update in all module views
 - better logging
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['base'],
 	'data'          : [

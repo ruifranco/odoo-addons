@@ -31,10 +31,8 @@
 This module is the first piece of an application that aims to be a caving information system with which caving groups will be able to record everything concerning their activities.
 
 Don't hesitate to give some feedback.
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
 """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : [
                         'mail',

@@ -34,10 +34,8 @@
 
 NOTE:
 A valid email server configuration is required
-                    
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                     """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['hr_holidays',],
 	'data'          : [

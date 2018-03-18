@@ -28,7 +28,7 @@
 	'description'   : """
 Adds three hierarchically dependent fields so that more info can be saved on addresses (typically, region, county, etc.).
                         """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'data'          : [
                         'security/ir.model.access.csv',

@@ -32,10 +32,8 @@ Go to the view administration, choose the one you want to change and press the '
 WARNING:\n
 - You should always check in the 'Inherited Views' tab for the existence of a view of the '_enlarge_form' type.\n
 If it is not there, repeat the operation.
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                     """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['base'],
 	'data'          : ['enlarge_form_view.xml',],

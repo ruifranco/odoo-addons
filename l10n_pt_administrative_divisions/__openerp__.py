@@ -29,7 +29,7 @@
 Preenche a informação relativa a 'Distrito', 'Concelho' e 'Freguesia'.\n\n
 Loads info concerning 'Distrito', 'Concelho', 'Freguesia'\n\n
 """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
     'depends'       : ['address_extended'],
 	'website'       : 'http://www.odooveloper.com',
 	'data'          : ['data/address_extended.places.csv',],

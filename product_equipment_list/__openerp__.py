@@ -27,10 +27,8 @@
     'summary'       : 'Management of equipment lists',
 	'description'   : """
 - Allows to define lists of equipment
-                        
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['product'],
 	'data'          : [

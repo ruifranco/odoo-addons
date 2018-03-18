@@ -36,10 +36,8 @@
                         
 NOTE:
 - (event.event) equipment_host_text and equipment_participants_text hold the equipment list as text
-                        
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : [
 	                   'product_equipment_list',

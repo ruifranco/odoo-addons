@@ -33,12 +33,9 @@ NOTES:\n
 - mail templates should be of the event.invitation.line type\n
 - invitations by bulk mail are not individually trackable\n
 - in bulk messages, the "TO" field contains all email addresses\n
-
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
 """,
 
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : [
 	                   'event',

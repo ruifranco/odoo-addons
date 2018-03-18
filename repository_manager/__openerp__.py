@@ -28,10 +28,8 @@
 - packs a module as well as its dependencies so that it can be deployed anywhere
 
 This module assumes you have ZIP installed in your system.
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
 """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['base'],
 	'data'         : [

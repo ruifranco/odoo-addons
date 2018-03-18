@@ -29,10 +29,8 @@
 Deals with the connection between Partners and Employees\n\n
 - one can create an employee from the partner's form\n
 - shows the 'employee' field in the partner's form (readonly)\n
-                        
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F
                         """,
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['hr'],
 	'data'          : ['hr_partner_employee_view.xml'],

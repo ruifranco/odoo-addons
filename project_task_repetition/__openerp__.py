@@ -27,10 +27,8 @@
     'summary'       : 'Allows to set repetition of project tasks',
 	'description'   : """
 With this module you are able to repeat project tasks pretty much in the same way as you repeat calendar events.
-
-MAKE SURE YOU CHECK MY OTHER MODULES AT... https://goo.gl/TteO1F	
 	""",
-	'author'        : 'Odooveloper (Rui Franco)',
+	'author'        : 'Odooveloper',
 	'website'       : 'http://www.odooveloper.com',
     'depends'       : ['project'],
 	'data'          : ['project_task_repetition_view.xml'],
