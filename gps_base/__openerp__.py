@@ -23,7 +23,7 @@
 {
     'name'          : 'GPS - base functions',
 	'version'       : '1.1',
-	'category'      : 'Extra Tools',
+	'category'      : 'Tools',
 	'summary'       : 'Base functionalities for the use of GPS coordinates',
 	'description'   : """
 Base GPS functions\n\n
@@ -34,8 +34,10 @@ Base GPS functions\n\n
 PS: 
 - map widget is based on Dorin Hongu's web_gmaps module
 - JavaScript had an invaluable help from Dinil UD
+
+MAKE SURE YOU CHECK MY OTHER MODULES AT... http://goo.gl/ZNr83u
                         """,
-	'author'        : 'Odooveloper',
+	'author'        : 'Odooveloper (Rui Franco)',
 	'website'       : 'http://www.odooveloper.com',
 	'depends'       : ['web'],
 	'data'          : [
