@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright Nova Code (http://www.novacode.nl)
+See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <data>
+        <record id="email_template_tree_inherit" model="ir.ui.view">
+            <field name="name">email.template.tree: style</field>
+            <field name="model">mail.template</field>
+            <field name="inherit_id" ref="mail.email_template_tree"/>
+            <field name="arch" type="xml">
+                <field name="partner_to" position="after">
+                    <field name="style_id"/>
+                    <field name="strip_inline_style"/>
+                    <field name="print_ref"/>
+                </field>
+            </field>
+        </record>
+        
+        <record  id="email_template_form_inherit" model="ir.ui.view">
+            <field name="name">email.template.form: style</field>
+            <field name="model">mail.template</field>
+            <field name="inherit_id" ref="mail.email_template_form"/>
+            <field name="arch" type="xml">
+                <field name="attachment_ids" position="before">
+                    <group>
+                        <group>
+                            <field name="print_ref"/>
+                        </group>
+                        <group cols="2" colspan="2">
+                            <field name="strip_inline_style"/>
+                            <field name="style_id"/>
+                        </group>
+                    </group>
+                    <p attrs="{'invisible': [('style_id', '=', False)]}">
+                        <i class="fa fa-lg fa-info-circle" aria-label="Preview with style info" title="Preview with style info"/><em> Use Preview to view the rendering result with Styling alterations.</em>
+                    </p>
+                </field>
+            </field>
+        </record>
+
+        <record  id="view_email_template_search_inherit" model="ir.ui.view">
+            <field name="name">email.template.search: style</field>
+            <field name="model">mail.template</field>
+            <field name="inherit_id" ref="mail.view_email_template_search"/>
+            <field name="arch" type="xml">
+                <field name="model_id" position="after">
+                    <field name="style_id"/>
+                    <separator/>
+                    <filter string="With Style (CSS)" domain="[('style_id', '!=', False)]" name="with_style"/>
+                    <filter string="No Style (CSS)" domain="[('style_id', '=', False)]" name="no_style"/>
+                    <separator/>
+                    <filter string="Strip Inline Style (CSS)" domain="[('strip_inline_style', '!=', False)]" name="strip_inline_style"/>
+                    <filter string="Don't Strip Inline Style (CSS)" domain="[('strip_inline_style', '=', False)]" name="no_strip_inline_style"/>
+                    <separator/>
+                    <filter string="Print Reference" domain="[('print_ref', '!=', False)]" name="with_print_ref"/>
+                    <filter string="Don't print Reference" domain="[('print_ref', '=', False)]" name="no_print_ref"/>
+                </field>
+
+                <xpath expr="//group" position="inside">
+                    <filter string="Style (CSS)" name="style" domain="[]" context="{'group_by':'style_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
