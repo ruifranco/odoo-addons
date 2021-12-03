@@ -29,8 +29,11 @@ class MailTemplate(models.Model):
 )
     print_ref = fields.Boolean(string='Print Reference', track_visibility='onchange')
 
+    def _print_ref(self):
+        ref = '<div id="mail_mail_template_ref"><p>(%s: %s)</p></div>' % (_('template ID'), self.id)
+        return ref
 
-    # transformed by Rui Franco
+
     def generate_email(self, res_ids, fields=None):
         self.ensure_one()
 
@@ -39,13 +42,15 @@ class MailTemplate(models.Model):
 
         results = super(MailTemplate, self).generate_email(res_ids, fields)
 
-        # Fix 2 - we must apply changes to all email templates
-        # Fix 3 - we must get the values from the dictionary
-        for key,value in results.items():
-            if 'body_html' not in results[key]:
+        # Fix 2 - is this a preview in a mail.template?
+        if self._context.get('template_id')\
+            and self._context.get('template_id')\
+            and self._context['active_model']=='mail.template':
+
+            if 'body_html' not in results:
                 return results
 
-            body_html = results[key]['body_html']
+            body_html = results['body_html']
 
             if self.strip_inline_style:
                 # Just do: strip_style=True
@@ -60,37 +65,33 @@ class MailTemplate(models.Model):
                 # premailer (transform) generates inline CSS/style attributes.
                 body_html = transform(body_html, allow_network=False)
 
-            results[key]['body'] = body_html
-            results[key]['body_html'] = body_html
+            results['body'] = body_html
+            results['body_html'] = body_html
+        else:
+            # This is either a sending or a preview in a wizard
+
+            # Fix 3 - we must apply changes to all email templates
+            # Fix 4 - we must get the values from the dictionary
+            for key,value in results.items():
+                if 'body_html' not in results[key]:
+                    return results
+
+                body_html = results[key]['body_html']
+
+                if self.strip_inline_style:
+                    # Just do: strip_style=True
+                    body_html = html_sanitize(body_html, sanitize_tags=False,
+                                                sanitize_attributes=False,
+                                                sanitize_style=False,
+                                                strip_style=True)
+                if self.print_ref:
+                    body_html += self._print_ref()
+                if self.style_id:
+                    body_html = '<style type="text/css">%s</style>%s' % (self.style_id.css, body_html)
+                    # premailer (transform) generates inline CSS/style attributes.
+                    body_html = transform(body_html, allow_network=False)
+
+                results[key]['body'] = body_html
+                results[key]['body_html'] = body_html
 
         return results
-
-    """
-    def generate_email(self, res_ids, fields=None):
-        self.ensure_one()
-        results = super(MailTemplate, self).generate_email(res_ids, fields)
-
-        if 'body_html' not in results:
-            return results
-
-        body_html = results['body_html']
-
-        if self.strip_inline_style:
-            # Just do: strip_style=True
-            body_html = html_sanitize(body_html, sanitize_tags=False, sanitize_attributes=False, sanitize_style=False, strip_style=True)
-        if self.print_ref:
-            body_html += self._print_ref()
-        if self.style_id:
-            body_html = '<style type="text/css">%s</style>%s' % (self.style_id.css, body_html)
-            # premailer (transform) generates inline CSS/style attributes.
-            body_html = transform(body_html, allow_network=False)
-
-        results['body'] = body_html
-        results['body_html'] = body_html
-
-        return results
-    """
-
-    def _print_ref(self):
-        ref = '<div id="mail_mail_template_ref"><p>(%s: %s)</p></div>' % (_('template ID'), self.id)
-        return ref
